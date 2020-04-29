@@ -1,0 +1,27 @@
+PODS:
+  - Nimble (7.3.4)
+  - Quick (1.2.0)
+  - RenetikLayout (0.1.0)
+
+DEPENDENCIES:
+  - Nimble (~> 7.0)
+  - Quick (~> 1.2.0)
+  - RenetikLayout (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Nimble
+    - Quick
+
+EXTERNAL SOURCES:
+  RenetikLayout:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  RenetikLayout: 4a152131ec35a68a7383d5d4d1fa0e44c534a3e8
+
+PODFILE CHECKSUM: 7068aa0fe37d4e3613693590874f7aeac8d0919f
+
+COCOAPODS: 1.9.1
