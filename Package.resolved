@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "renetik-library-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/rene-dohan/renetik-library-ios",
+      "state" : {
+        "branch" : "master",
+        "revision" : "3398c8e37b893084fc9be99ec7a9f2bb78d105ff"
+      }
+    }
+  ],
+  "version" : 2
+}
