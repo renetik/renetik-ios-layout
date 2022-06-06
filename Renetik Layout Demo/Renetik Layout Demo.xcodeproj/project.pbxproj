@@ -16,6 +16,7 @@
 		04D74716284E7E1E00EC8337 /* Renetik_Layout_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D74715284E7E1E00EC8337 /* Renetik_Layout_DemoTests.swift */; };
 		04D74720284E7E1E00EC8337 /* Renetik_Layout_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7471F284E7E1E00EC8337 /* Renetik_Layout_DemoUITests.swift */; };
 		04D74722284E7E1E00EC8337 /* Renetik_Layout_DemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D74721284E7E1E00EC8337 /* Renetik_Layout_DemoUITestsLaunchTests.swift */; };
+		04D74730284E7EA000EC8337 /* RenetikLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 04D7472F284E7EA000EC8337 /* RenetikLayout */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		04D7471B284E7E1E00EC8337 /* Renetik Layout DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Renetik Layout DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D7471F284E7E1E00EC8337 /* Renetik_Layout_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renetik_Layout_DemoUITests.swift; sourceTree = "<group>"; };
 		04D74721284E7E1E00EC8337 /* Renetik_Layout_DemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renetik_Layout_DemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		04D74732284E7EC000EC8337 /* renetik-ios-layout */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "renetik-ios-layout"; path = ..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D74730284E7EA000EC8337 /* RenetikLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +82,7 @@
 		04D746F2284E7E1C00EC8337 = {
 			isa = PBXGroup;
 			children = (
+				04D74731284E7EC000EC8337 /* Packages */,
 				04D746FD284E7E1D00EC8337 /* Renetik Layout Demo */,
 				04D74714284E7E1E00EC8337 /* Renetik Layout DemoTests */,
 				04D7471E284E7E1E00EC8337 /* Renetik Layout DemoUITests */,
@@ -127,6 +131,14 @@
 			path = "Renetik Layout DemoUITests";
 			sourceTree = "<group>";
 		};
+		04D74731284E7EC000EC8337 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				04D74732284E7EC000EC8337 /* renetik-ios-layout */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +155,9 @@
 			dependencies = (
 			);
 			name = "Renetik Layout Demo";
+			packageProductDependencies = (
+				04D7472F284E7EA000EC8337 /* RenetikLayout */,
+			);
 			productName = "Renetik Layout Demo";
 			productReference = 04D746FB284E7E1D00EC8337 /* Renetik Layout Demo.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +230,9 @@
 				Base,
 			);
 			mainGroup = 04D746F2284E7E1C00EC8337;
+			packageReferences = (
+				04D7472E284E7EA000EC8337 /* XCRemoteSwiftPackageReference "renetik-ios-layout" */,
+			);
 			productRefGroup = 04D746FC284E7E1D00EC8337 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -602,6 +620,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		04D7472E284E7EA000EC8337 /* XCRemoteSwiftPackageReference "renetik-ios-layout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rene-dohan/renetik-ios-layout";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		04D7472F284E7EA000EC8337 /* RenetikLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04D7472E284E7EA000EC8337 /* XCRemoteSwiftPackageReference "renetik-ios-layout" */;
+			productName = RenetikLayout;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 04D746F3284E7E1C00EC8337 /* Project object */;
 }

@@ -6,14 +6,23 @@
 //
 
 import UIKit
+import RenetikLayout
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        logInfo("test")
     }
-
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let label = UILabel.construct(color: .blue)
+        label.text = "test"
+        label.textAlignment = .center
+        label.resizeToFit(padding:15)
+        view.add(view: label).centered()
+        view.debugLayoutByRandomBackgroundColor()
+    }
 }
 
