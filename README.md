@@ -1,7 +1,14 @@
 # Renetik iOS Layout
 
 ## About
-Write complex reliable layouts easy by using declarative stntax and pure code approach. This way you never has to write your layout again using other whatever, it's compatible because its based on basic UIKit technology. You dont need to learn new artifical paradigms just get better in real prgramming.
+Write complex reliable layouts easy, 
+by using declarative readable syntax and pure code approach. 
+This way you never has to rewrite your layout again using other whatever way to do it. 
+Its always compatible because it is based on basic UIKit underlying technology. 
+You don't need to learn new artificial paradigms to solve the same puzzle 
+by different methods all over again, 
+just get better in real programming and focus on your task, 
+not new ways of doing things that distract you from making great products.
 
 ## Example
 
