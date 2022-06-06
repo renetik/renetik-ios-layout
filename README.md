@@ -1,4 +1,4 @@
-# Renetik Layout
+# Renetik iOS Layout
 
 ## Demo
 To run the example project, clone the repo and open Demo project.
