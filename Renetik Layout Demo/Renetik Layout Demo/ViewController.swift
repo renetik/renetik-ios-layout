@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         let label = UILabel.construct(color: .blue)
         label.text = "test"
         label.textAlignment = .center
-        label.resizeToFit(padding:15)
+        label.resizeToFit(padding:115)
         view.add(view: label).centered()
         view.debugLayoutByRandomBackgroundColor()
     }
