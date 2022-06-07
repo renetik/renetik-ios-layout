@@ -17,11 +17,8 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let label = UILabel.construct(color: .blue)
-        label.text = "test"
-        label.textAlignment = .center
-        label.resizeToFit(padding:115)
-        view.add(view: label).centered()
+        view.add(view: UILabel.construct(color: .blue).text("Test")
+            .text(align: .center).resizeToFit(padding: 30)).centered()
         view.debugLayoutByRandomBackgroundColor()
     }
 }
