@@ -14,20 +14,16 @@ class MainView: CSView {
 }
 
 class MainViewController: UIViewController {
-
     lazy var content = { MainView.construct() }()
-
     override func loadView() { view = content }
 }
 
 #if DEBUG
-import SwiftUI
-
-class MainViewPreview: PreviewProvider, CSPreviewProvider {
-    class func function(_ view: UIView) {
-        view.add(view: MainView.construct())
+    import SwiftUI
+    class MainViewPreview: PreviewProvider, CSPreviewProvider {
+        class func preview(in view: UIView) {
+            view.add(view: MainView.construct())
+        }
     }
-}
-
 #endif
 

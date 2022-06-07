@@ -2,12 +2,12 @@
 import SwiftUI
 
 public protocol CSPreviewProvider{
-    static func function(_ view:UIView)
+    static func preview(in view: UIView)
 }
 
 public extension PreviewProvider where Self:CSPreviewProvider {
     static var previews: some View {
-        CSViewRepresentable { function($0) }
+        CSViewRepresentable { preview(in: $0) }
     }
 }
 

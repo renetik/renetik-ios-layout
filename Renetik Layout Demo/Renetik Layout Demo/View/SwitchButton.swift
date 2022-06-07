@@ -22,7 +22,7 @@ class SwitchButton: CSWrapper<UIView> {
         })
         contentView.add(view: titleView, onCreate: {
             $0.fromPrevious(left: 24).matchParentHeight()
-        }, onLayout: { [unowned self]  view in
+        }, onLayout: { [unowned self] view in
             view.fill(right: 0, from: switchView)
         })
         contentView.add(view: switchView
@@ -33,7 +33,7 @@ class SwitchButton: CSWrapper<UIView> {
     
     override func onLayoutCreated() {
         super.onLayoutCreated()
-//        addRipple()
+        //        addRipple()
         onClick { [unowned self] in
             switchView.setOn(!switchView.isOn, animated: true)
             logInfo()
@@ -45,7 +45,7 @@ class SwitchButton: CSWrapper<UIView> {
 import SwiftUI
 
 class SwitchButtonPreview: PreviewProvider, CSPreviewProvider {
-    class func function(_ view: UIView) {
+    class func preview(in view: UIView) {
         view.add(view: SwitchButton.construct(
             icon: .chevron_right, title: "Test"))
         .matchParentWidth().background(.demo_control)
