@@ -113,13 +113,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		041A014D284FC732007372AB /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
 		041A018F284FD854007372AB /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				041A018F284FD854007372AB /* View */,
-				041A014D284FC732007372AB /* Assets */,
 				041A014C284FC711007372AB /* Resources */,
 				04E3CF10284ED79000B91C98 /* LaunchScreen.xib */,
 				04D746FE284E7E1D00EC8337 /* AppDelegate.swift */,
