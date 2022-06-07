@@ -8,6 +8,7 @@ public protocol CSPreviewProvider{
 public extension PreviewProvider where Self:CSPreviewProvider {
     static var previews: some View {
         CSViewRepresentable { preview(in: $0) }
+//            .previewLayout(.fixed(width:568,height:320)) //TODO
     }
 }
 
@@ -21,6 +22,7 @@ struct CSViewRepresentable: UIViewRepresentable {
     
     func updateUIView(_ uiView: UIView, context: Context) {
         uiView.updateLayout()
+//        uiView.matchParent()
     }
     
     func makeUIView(context: Context) -> UIView {

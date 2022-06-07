@@ -1,18 +1,24 @@
 import RenetikLayout
-import UIKit
 
 class MainView: CSView {
     override func onCreateLayout() {
         super.onCreateLayout()
         background(.demo_panel)
-        add(view: SwitchButton.construct(icon: .chevron_right, title: "test"))
-            .matchParentWidth().centered()
-            .background(.demo_control)
-        
-        add(view: ImageTitleSubtitleButton.construct())
-            .matchParentWidth().fromPrevious(top: 5)
-            .background(.demo_control)
-//        debugLayoutByRandomBackgroundColor()
+        add(view: CSView.construct(), onCreate: {
+            $0.matchParentWidth()
+            $0.add(view: SwitchButton.construct(icon: .chevron_right, title: "test"))
+                .matchParentWidth()
+                .background(.demo_control).heightToFit()
+            
+            $0.add(view: ImageTitleSubtitleButton.construct(), onCreate: {
+                $0.matchParentWidth().heightToFit().background(.demo_control)
+            }, onLayout: {
+                $0.fromPrevious(top: 15)
+            })
+        }, onLayout: {
+            $0.heightToFit().centeredVertical()
+        })
+        //        debugLayoutByRandomBackgroundColor()
     }
 }
 
@@ -22,11 +28,10 @@ class MainViewController: UIViewController {
 }
 
 #if DEBUG
-    import SwiftUI
-    class MainViewPreview: PreviewProvider, CSPreviewProvider {
-        class func preview(in view: UIView) {
-            view.add(view: MainView.construct())
-        }
+import SwiftUI
+class MainViewPreview: PreviewProvider, CSPreviewProvider {
+    class func preview(in view: UIView) {
+        view.add(view: MainView.construct()).matchParent()
     }
+}
 #endif
-

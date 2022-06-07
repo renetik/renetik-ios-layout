@@ -1,14 +1,12 @@
 import RenetikLayout
 
 class SwitchButton: CSWrapper<UIView> {
-    
     class func construct(icon: UIImage, title: String) -> Self {
         construct().padding(left: 15).padding(right: 5).padding(vertical: 5).also {
             $0.titleView.text(title)
             $0.imageView.image(icon)
         }
     }
-    
     let contentView = CSView.construct(height: 50).interaction(enabled: false)
     let imageView = UIImageView.construct(.chevron_right).tint(color: .demo_text_strong)
     let titleView = UILabel.construct().font(.inst_button).text(color: .demo_text_strong)
@@ -25,8 +23,7 @@ class SwitchButton: CSWrapper<UIView> {
         }, onLayout: { [unowned self] view in
             view.fill(right: 0, from: switchView)
         })
-        contentView.add(view: switchView
-                        , onLayout: { [unowned self] in
+        contentView.add(view: switchView , onLayout: { [unowned self] in
             $0.from(right: rightInset).centeredVertical()
         })
     }
@@ -40,10 +37,8 @@ class SwitchButton: CSWrapper<UIView> {
         }
     }
 }
-
 #if DEBUG
 import SwiftUI
-
 class SwitchButtonPreview: PreviewProvider, CSPreviewProvider {
     class func preview(in view: UIView) {
         view.add(view: SwitchButton.construct(
@@ -51,5 +46,4 @@ class SwitchButtonPreview: PreviewProvider, CSPreviewProvider {
         .matchParentWidth().background(.demo_control)
     }
 }
-
 #endif
