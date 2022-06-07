@@ -1,5 +1,4 @@
 import RenetikLayout
-
 class MainView: CSView {
     override func onCreateLayout() {
         super.onCreateLayout()
