@@ -12,7 +12,35 @@ not new ways of doing things that distract you from making great products.
 
 ## Example
 
-... soon ...
+<p align="left">
+    <img src="Images/ScreenShot1.png" width="500">
+</p>
+
+```swift
+import RenetikLayout
+
+class MainView: CSView {
+    override func onCreateLayout() {
+        super.onCreateLayout()
+        background(.demo_panel)
+        add(view: CSView.construct(), onCreate: {
+            $0.matchParentWidth()
+            $0.add(view: SwitchButton.construct(icon: .chevron_right, title: "test"))
+                .matchParentWidth()
+                .background(.demo_control).heightToFit()
+            
+            $0.add(view: ImageTitleSubtitleButton.construct(), onCreate: {
+                $0.matchParentWidth().heightToFit().background(.demo_control)
+            }, onLayout: {
+                $0.fromPrevious(top: 15)
+            })
+        }, onLayout: {
+            $0.heightToFit().centeredVertical()
+        })
+        //        debugLayoutByRandomBackgroundColor()
+    }
+}
+```
 
 ## Demo
 To run the example project, clone the repo and open Demo project.
