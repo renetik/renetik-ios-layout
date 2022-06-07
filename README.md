@@ -13,7 +13,7 @@ not new ways of doing things that distract you from making great products.
 ## Example
 
 <p align="left">
-    <img src="Images/ScreenShot1.png" width="400">
+    <img src="Images/ScreenShot1.png" width="500">
 </p>
 
 ```swift
