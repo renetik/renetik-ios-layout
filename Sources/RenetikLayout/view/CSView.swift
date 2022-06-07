@@ -1,14 +1,7 @@
-//
-// Created by Rene Dohan on 12/22/19.
-//
-
-import UIKit
-import Renetik
-
 open class CSView: UIControl {
 
     @discardableResult
-    open class func construct() -> Self { construct(defaultSize: true) }
+    open override class func construct() -> Self { construct(defaultSize: true) }
 
     @discardableResult
     public class func construct(_ function: ArgFunc<CSView>) -> Self {

@@ -1,10 +1,3 @@
-//
-// Created by Rene Dohan on 2/19/20.
-//
-
-import UIKit
-import Renetik
-
 public protocol CSHasLayoutProtocol {
     var layoutFunctions: CSEvent<Void> { get }
     func updateLayout() -> Self

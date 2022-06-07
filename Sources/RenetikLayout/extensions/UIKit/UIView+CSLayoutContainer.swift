@@ -108,8 +108,6 @@ public extension UIView {
         add(view: UIView.construct()).height(height).from(bottom: 0).matchParentWidth()
             .flexibleTop().fixedBottom().background(color)
     }
-
-    @objc var isEmpty: Bool { subviews.isEmpty }
 }
 
 public extension UIView {
