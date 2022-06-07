@@ -8,12 +8,16 @@ import Renetik
 
 //import RenetikBlocksKit
 
-extension UIView {
-    @discardableResult
-    @objc open func construct() -> Self { setAutoresizingDefaults() }
-}
+//extension UIView {
+//    @discardableResult
+//    @objc override open func construct() -> Self { setAutoresizingDefaults() }
+//}
 
 public extension UIView {
+    
+//    override open func construct() -> Self {
+//        super.construct().setAutoresizingDefaults()
+//    }
     
     class func construct(owner: NSObject? = nil, xib: String) -> Self {
         let arrayOfXibObjects = Bundle.main.loadNibNamed(xib, owner: owner, options: nil)

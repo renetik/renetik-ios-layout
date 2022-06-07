@@ -9,14 +9,12 @@
 /* Begin PBXBuildFile section */
 		040E873A284E8AA3003C74EF /* RenetikLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 040E8739284E8AA3003C74EF /* RenetikLayout */; };
 		04D746FF284E7E1D00EC8337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D746FE284E7E1D00EC8337 /* AppDelegate.swift */; };
-		04D74701284E7E1D00EC8337 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D74700284E7E1D00EC8337 /* SceneDelegate.swift */; };
 		04D74703284E7E1D00EC8337 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D74702284E7E1D00EC8337 /* ViewController.swift */; };
-		04D74706284E7E1D00EC8337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D74704284E7E1D00EC8337 /* Main.storyboard */; };
 		04D74708284E7E1D00EC8337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04D74707284E7E1D00EC8337 /* Assets.xcassets */; };
-		04D7470B284E7E1D00EC8337 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D74709284E7E1D00EC8337 /* LaunchScreen.storyboard */; };
 		04D74716284E7E1E00EC8337 /* Renetik_Layout_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D74715284E7E1E00EC8337 /* Renetik_Layout_DemoTests.swift */; };
 		04D74720284E7E1E00EC8337 /* Renetik_Layout_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7471F284E7E1E00EC8337 /* Renetik_Layout_DemoUITests.swift */; };
 		04D74722284E7E1E00EC8337 /* Renetik_Layout_DemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D74721284E7E1E00EC8337 /* Renetik_Layout_DemoUITestsLaunchTests.swift */; };
+		04E3CF11284ED79000B91C98 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E3CF10284ED79000B91C98 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,17 +38,15 @@
 		040E8737284E8A78003C74EF /* renetik-ios-layout */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "renetik-ios-layout"; path = ..; sourceTree = "<group>"; };
 		04D746FB284E7E1D00EC8337 /* Renetik Layout Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Renetik Layout Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D746FE284E7E1D00EC8337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04D74700284E7E1D00EC8337 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		04D74702284E7E1D00EC8337 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		04D74705284E7E1D00EC8337 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04D74707284E7E1D00EC8337 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		04D7470A284E7E1D00EC8337 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04D7470C284E7E1D00EC8337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04D74711284E7E1E00EC8337 /* Renetik Layout DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Renetik Layout DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D74715284E7E1E00EC8337 /* Renetik_Layout_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renetik_Layout_DemoTests.swift; sourceTree = "<group>"; };
 		04D7471B284E7E1E00EC8337 /* Renetik Layout DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Renetik Layout DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D7471F284E7E1E00EC8337 /* Renetik_Layout_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renetik_Layout_DemoUITests.swift; sourceTree = "<group>"; };
 		04D74721284E7E1E00EC8337 /* Renetik_Layout_DemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renetik_Layout_DemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		04E3CF10284ED79000B91C98 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,12 +107,10 @@
 		04D746FD284E7E1D00EC8337 /* Renetik Layout Demo */ = {
 			isa = PBXGroup;
 			children = (
+				04E3CF10284ED79000B91C98 /* LaunchScreen.xib */,
 				04D746FE284E7E1D00EC8337 /* AppDelegate.swift */,
-				04D74700284E7E1D00EC8337 /* SceneDelegate.swift */,
 				04D74702284E7E1D00EC8337 /* ViewController.swift */,
-				04D74704284E7E1D00EC8337 /* Main.storyboard */,
 				04D74707284E7E1D00EC8337 /* Assets.xcassets */,
-				04D74709284E7E1D00EC8337 /* LaunchScreen.storyboard */,
 				04D7470C284E7E1D00EC8337 /* Info.plist */,
 			);
 			path = "Renetik Layout Demo";
@@ -256,9 +250,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04D7470B284E7E1D00EC8337 /* LaunchScreen.storyboard in Resources */,
 				04D74708284E7E1D00EC8337 /* Assets.xcassets in Resources */,
-				04D74706284E7E1D00EC8337 /* Main.storyboard in Resources */,
+				04E3CF11284ED79000B91C98 /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +278,6 @@
 			files = (
 				04D74703284E7E1D00EC8337 /* ViewController.swift in Sources */,
 				04D746FF284E7E1D00EC8337 /* AppDelegate.swift in Sources */,
-				04D74701284E7E1D00EC8337 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,25 +312,6 @@
 			targetProxy = 04D7471C284E7E1E00EC8337 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		04D74704284E7E1D00EC8337 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04D74705284E7E1D00EC8337 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		04D74709284E7E1D00EC8337 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04D7470A284E7E1D00EC8337 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		04D74723284E7E1E00EC8337 /* Debug */ = {
@@ -467,7 +440,6 @@
 				INFOPLIST_FILE = "Renetik Layout Demo/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -495,7 +467,6 @@
 				INFOPLIST_FILE = "Renetik Layout Demo/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

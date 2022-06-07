@@ -18,7 +18,7 @@ open class CSView: UIControl {
     }
 
     @discardableResult
-    open override func construct() -> Self {
+    override open func construct() -> Self {
         super.construct().defaultSize()
         onCreateLayout()
         onLayoutCreated()
