@@ -1,5 +1,4 @@
 import RenetikLayout
-import SVGKit
 
 typealias Images = UIImage
 

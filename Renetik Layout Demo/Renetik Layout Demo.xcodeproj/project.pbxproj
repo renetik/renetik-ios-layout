@@ -15,10 +15,8 @@
 		041A0157284FC7A1007372AB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A0151284FC7A0007372AB /* Colors.swift */; };
 		041A0158284FC7A1007372AB /* Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A0152284FC7A0007372AB /* Values.swift */; };
 		041A0159284FC7A1007372AB /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A0153284FC7A0007372AB /* Fonts.swift */; };
-		041A0169284FCCA3007372AB /* SVGKit in Frameworks */ = {isa = PBXBuildFile; productRef = 041A0168284FCCA3007372AB /* SVGKit */; };
-		041A016B284FCCA3007372AB /* SVGKitSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 041A016A284FCCA3007372AB /* SVGKitSwift */; };
 		04D746FF284E7E1D00EC8337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D746FE284E7E1D00EC8337 /* AppDelegate.swift */; };
-		04D74703284E7E1D00EC8337 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D74702284E7E1D00EC8337 /* ViewController.swift */; };
+		04D74703284E7E1D00EC8337 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D74702284E7E1D00EC8337 /* MainViewController.swift */; };
 		04D74708284E7E1D00EC8337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04D74707284E7E1D00EC8337 /* Assets.xcassets */; };
 		04D74716284E7E1E00EC8337 /* Renetik_Layout_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D74715284E7E1E00EC8337 /* Renetik_Layout_DemoTests.swift */; };
 		04D74720284E7E1E00EC8337 /* Renetik_Layout_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7471F284E7E1E00EC8337 /* Renetik_Layout_DemoUITests.swift */; };
@@ -54,7 +52,7 @@
 		041A0153284FC7A0007372AB /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		04D746FB284E7E1D00EC8337 /* Renetik Layout Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Renetik Layout Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D746FE284E7E1D00EC8337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04D74702284E7E1D00EC8337 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04D74702284E7E1D00EC8337 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		04D74707284E7E1D00EC8337 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04D7470C284E7E1D00EC8337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04D74711284E7E1E00EC8337 /* Renetik Layout DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Renetik Layout DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,8 +68,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				041A016B284FCCA3007372AB /* SVGKitSwift in Frameworks */,
-				041A0169284FCCA3007372AB /* SVGKit in Frameworks */,
 				040E873A284E8AA3003C74EF /* RenetikLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,7 +154,7 @@
 				041A014C284FC711007372AB /* Resources */,
 				04E3CF10284ED79000B91C98 /* LaunchScreen.xib */,
 				04D746FE284E7E1D00EC8337 /* AppDelegate.swift */,
-				04D74702284E7E1D00EC8337 /* ViewController.swift */,
+				04D74702284E7E1D00EC8337 /* MainViewController.swift */,
 				04D74707284E7E1D00EC8337 /* Assets.xcassets */,
 				04D7470C284E7E1D00EC8337 /* Info.plist */,
 			);
@@ -208,8 +204,6 @@
 			name = "Renetik Layout Demo";
 			packageProductDependencies = (
 				040E8739284E8AA3003C74EF /* RenetikLayout */,
-				041A0168284FCCA3007372AB /* SVGKit */,
-				041A016A284FCCA3007372AB /* SVGKitSwift */,
 			);
 			productName = "Renetik Layout Demo";
 			productReference = 04D746FB284E7E1D00EC8337 /* Renetik Layout Demo.app */;
@@ -284,7 +278,6 @@
 			);
 			mainGroup = 04D746F2284E7E1C00EC8337;
 			packageReferences = (
-				041A0167284FCCA2007372AB /* XCRemoteSwiftPackageReference "SVGKit" */,
 			);
 			productRefGroup = 04D746FC284E7E1D00EC8337 /* Products */;
 			projectDirPath = "";
@@ -328,7 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04D74703284E7E1D00EC8337 /* ViewController.swift in Sources */,
+				04D74703284E7E1D00EC8337 /* MainViewController.swift in Sources */,
 				041A0155284FC7A1007372AB /* Styles.swift in Sources */,
 				041A0154284FC7A1007372AB /* Images.swift in Sources */,
 				041A0157284FC7A1007372AB /* Colors.swift in Sources */,
@@ -658,31 +651,10 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		041A0167284FCCA2007372AB /* XCRemoteSwiftPackageReference "SVGKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SVGKit/SVGKit";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 3.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
 		040E8739284E8AA3003C74EF /* RenetikLayout */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RenetikLayout;
-		};
-		041A0168284FCCA3007372AB /* SVGKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 041A0167284FCCA2007372AB /* XCRemoteSwiftPackageReference "SVGKit" */;
-			productName = SVGKit;
-		};
-		041A016A284FCCA3007372AB /* SVGKitSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 041A0167284FCCA2007372AB /* XCRemoteSwiftPackageReference "SVGKit" */;
-			productName = SVGKitSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
