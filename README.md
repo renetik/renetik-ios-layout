@@ -24,7 +24,7 @@ Open and clear mind.
 You can install using swift package manager for now.
 
 ## Author
-Rene Dohan, dohan.rene@gmail.com
+Renetik, [Website](https://rene-dohan.github.io)
 
 ## License
 Renetik Layout is available under the MIT license. See the LICENSE file for more info.
