@@ -15,6 +15,8 @@
 		041A0157284FC7A1007372AB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A0151284FC7A0007372AB /* Colors.swift */; };
 		041A0158284FC7A1007372AB /* Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A0152284FC7A0007372AB /* Values.swift */; };
 		041A0159284FC7A1007372AB /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A0153284FC7A0007372AB /* Fonts.swift */; };
+		0429AAFF284FE95400FBFE96 /* ImageTitleSubtitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0429AAFE284FE95400FBFE96 /* ImageTitleSubtitleButton.swift */; };
+		0429AB01284FEDF600FBFE96 /* LineViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0429AB00284FEDF600FBFE96 /* LineViews.swift */; };
 		04D746FF284E7E1D00EC8337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D746FE284E7E1D00EC8337 /* AppDelegate.swift */; };
 		04D74703284E7E1D00EC8337 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D74702284E7E1D00EC8337 /* MainView.swift */; };
 		04D74708284E7E1D00EC8337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04D74707284E7E1D00EC8337 /* Assets.xcassets */; };
@@ -50,6 +52,8 @@
 		041A0151284FC7A0007372AB /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		041A0152284FC7A0007372AB /* Values.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Values.swift; sourceTree = "<group>"; };
 		041A0153284FC7A0007372AB /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		0429AAFE284FE95400FBFE96 /* ImageTitleSubtitleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTitleSubtitleButton.swift; sourceTree = "<group>"; };
+		0429AB00284FEDF600FBFE96 /* LineViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineViews.swift; sourceTree = "<group>"; };
 		04D746FB284E7E1D00EC8337 /* Renetik Layout Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Renetik Layout Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D746FE284E7E1D00EC8337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04D74702284E7E1D00EC8337 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 			children = (
 				04D74702284E7E1D00EC8337 /* MainView.swift */,
 				041A014A284FC4C7007372AB /* SwitchButton.swift */,
+				0429AAFE284FE95400FBFE96 /* ImageTitleSubtitleButton.swift */,
+				0429AB00284FEDF600FBFE96 /* LineViews.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -327,9 +333,11 @@
 				041A0157284FC7A1007372AB /* Colors.swift in Sources */,
 				041A014B284FC4C7007372AB /* SwitchButton.swift in Sources */,
 				041A0156284FC7A1007372AB /* Strings.swift in Sources */,
+				0429AAFF284FE95400FBFE96 /* ImageTitleSubtitleButton.swift in Sources */,
 				04D746FF284E7E1D00EC8337 /* AppDelegate.swift in Sources */,
 				041A0159284FC7A1007372AB /* Fonts.swift in Sources */,
 				041A0158284FC7A1007372AB /* Values.swift in Sources */,
+				0429AB01284FEDF600FBFE96 /* LineViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -4,12 +4,15 @@ import UIKit
 class MainView: CSView {
     override func onCreateLayout() {
         super.onCreateLayout()
-        background(.demo_control)
-        add(view: UILabel.construct(color: .blue).text("Test")
-                .text(align: .center).resizeToFit(padding: 30)).centered()
+        background(.demo_panel)
         add(view: SwitchButton.construct(icon: .chevron_right, title: "test"))
+            .matchParentWidth().centered()
+            .background(.demo_control)
+        
+        add(view: ImageTitleSubtitleButton.construct())
             .matchParentWidth().fromPrevious(top: 5)
-        //        debugLayoutByRandomBackgroundColor()
+            .background(.demo_control)
+//        debugLayoutByRandomBackgroundColor()
     }
 }
 
