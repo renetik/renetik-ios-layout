@@ -1,10 +1,3 @@
-//
-//  Renetik_Layout_DemoUITestsLaunchTests.swift
-//  Renetik Layout DemoUITests
-//
-//  Created by Renetik on 06/06/22.
-//
-
 import XCTest
 
 class Renetik_Layout_DemoUITestsLaunchTests: XCTestCase {
@@ -20,7 +13,10 @@ class Renetik_Layout_DemoUITestsLaunchTests: XCTestCase {
     func testLaunch() throws {
         let app = XCUIApplication()
         app.launch()
-
+        
+        let app = XCUIApplication()
+        app.staticTexts["test"].tap()
+        
         // Insert steps here to perform after app launch but before taking a screenshot,
         // such as logging into a test account or navigating somewhere in the app
 

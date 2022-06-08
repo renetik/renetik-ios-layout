@@ -7,11 +7,12 @@ class SwitchButton: CSWrapper<UIView> {
             $0.imageView.image(icon)
         }
     }
+
     let contentView = CSView.construct(height: 50).interaction(enabled: false)
     let imageView = UIImageView.construct(.chevron_right).tint(color: .demo_text_strong)
     let titleView = UILabel.construct().font(.inst_button).text(color: .demo_text_strong)
     let switchView = UISwitch.construct()
-    
+
     override func onCreateLayout() {
         super.onCreateLayout()
         wrap(contentView)
@@ -23,28 +24,26 @@ class SwitchButton: CSWrapper<UIView> {
         }, onLayout: { [unowned self] view in
             view.fill(right: 0, from: switchView)
         })
-        contentView.add(view: switchView , onLayout: { [unowned self] in
+        contentView.add(view: switchView, onLayout: { [unowned self] in
             $0.from(right: rightInset).centeredVertical()
         })
     }
-    
+
     override func onLayoutCreated() {
         super.onLayoutCreated()
-        //        addRipple()
-        onClick { [unowned self] in
-            switchView.setOn(!switchView.isOn, animated: true)
-            logInfo()
-        }
+        addTouchEffect()
+        onClick { [unowned self] in switchView.setOn(!switchView.isOn, animated: true) }
     }
 }
+
 #if DEBUG
 import SwiftUI
-//@available(iOS 15.0, *)
+
 class SwitchButtonPreview: PreviewProvider, CSPreviewProvider {
     class func preview(in view: UIView) {
         view.add(view: SwitchButton.construct(
-            icon: .chevron_right, title: "Test"))
-        .matchParentWidth().background(.demo_control)
+                icon: .chevron_right, title: "Test"))
+            .matchParentWidth().background(.demo_control)
     }
 }
 #endif

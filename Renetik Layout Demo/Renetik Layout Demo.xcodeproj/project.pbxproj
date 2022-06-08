@@ -17,6 +17,7 @@
 		0429AAFF284FE95400FBFE96 /* ImageTitleSubtitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0429AAFE284FE95400FBFE96 /* ImageTitleSubtitleButton.swift */; };
 		0429AB01284FEDF600FBFE96 /* LineViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0429AB00284FEDF600FBFE96 /* LineViews.swift */; };
 		04645D582850F1C300FD39CC /* RenetikLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 04645D572850F1C300FD39CC /* RenetikLayout */; };
+		04941BBA285138760002DF29 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04941BB9285138760002DF29 /* UIView+.swift */; };
 		04D746FF284E7E1D00EC8337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D746FE284E7E1D00EC8337 /* AppDelegate.swift */; };
 		04D74703284E7E1D00EC8337 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D74702284E7E1D00EC8337 /* MainView.swift */; };
 		04D74708284E7E1D00EC8337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04D74707284E7E1D00EC8337 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		0429AAFE284FE95400FBFE96 /* ImageTitleSubtitleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTitleSubtitleButton.swift; sourceTree = "<group>"; };
 		0429AB00284FEDF600FBFE96 /* LineViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineViews.swift; sourceTree = "<group>"; };
 		04645D562850F1A600FD39CC /* renetik-ios-layout */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "renetik-ios-layout"; path = ..; sourceTree = "<group>"; };
+		04941BB9285138760002DF29 /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		04D746FB284E7E1D00EC8337 /* Renetik Layout Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Renetik Layout Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D746FE284E7E1D00EC8337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04D74702284E7E1D00EC8337 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		041A018F284FD854007372AB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04941BB9285138760002DF29 /* UIView+.swift */,
 				04D74702284E7E1D00EC8337 /* MainView.swift */,
 				041A014A284FC4C7007372AB /* SwitchButton.swift */,
 				0429AAFE284FE95400FBFE96 /* ImageTitleSubtitleButton.swift */,
@@ -319,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04941BBA285138760002DF29 /* UIView+.swift in Sources */,
 				04D74703284E7E1D00EC8337 /* MainView.swift in Sources */,
 				041A0155284FC7A1007372AB /* Styles.swift in Sources */,
 				041A0154284FC7A1007372AB /* Images.swift in Sources */,

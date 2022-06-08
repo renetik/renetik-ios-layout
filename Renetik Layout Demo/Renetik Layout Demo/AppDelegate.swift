@@ -1,12 +1,14 @@
 import RenetikLayout
 
+var delegate: AppDelegate!
+
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
-    public var window: UIWindow?
+class AppDelegate: CSApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions
                      launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        Renetik.initialize()
+        delegate = self
+        self.application(application, launchOptions)
         window = UIWindow.construct(MainViewController())
         return true
     }
