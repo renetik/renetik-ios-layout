@@ -39,6 +39,7 @@ class SwitchButton: CSWrapper<UIView> {
 }
 #if DEBUG
 import SwiftUI
+//@available(iOS 15.0, *)
 class SwitchButtonPreview: PreviewProvider, CSPreviewProvider {
     class func preview(in view: UIView) {
         view.add(view: SwitchButton.construct(

@@ -1,4 +1,5 @@
 import RenetikLayout
+
 class MainView: CSView {
     override func onCreateLayout() {
         super.onCreateLayout()
@@ -29,6 +30,8 @@ class MainViewController: UIViewController {
 #if DEBUG
 import SwiftUI
 class MainViewPreview: PreviewProvider, CSPreviewProvider {
+    static var dimension: CSPreviewDimension = .iPhone8
+    static var isPortrait = false
     class func preview(in view: UIView) {
         view.add(view: MainView.construct()).matchParent()
     }
