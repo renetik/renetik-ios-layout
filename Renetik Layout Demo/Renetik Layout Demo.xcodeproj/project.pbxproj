@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		040E873A284E8AA3003C74EF /* RenetikLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 040E8739284E8AA3003C74EF /* RenetikLayout */; };
 		041A014B284FC4C7007372AB /* SwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A014A284FC4C7007372AB /* SwitchButton.swift */; };
 		041A0154284FC7A1007372AB /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A014E284FC7A0007372AB /* Images.swift */; };
 		041A0155284FC7A1007372AB /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A014F284FC7A0007372AB /* Styles.swift */; };
@@ -17,6 +16,7 @@
 		041A0159284FC7A1007372AB /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A0153284FC7A0007372AB /* Fonts.swift */; };
 		0429AAFF284FE95400FBFE96 /* ImageTitleSubtitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0429AAFE284FE95400FBFE96 /* ImageTitleSubtitleButton.swift */; };
 		0429AB01284FEDF600FBFE96 /* LineViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0429AB00284FEDF600FBFE96 /* LineViews.swift */; };
+		04645D582850F1C300FD39CC /* RenetikLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 04645D572850F1C300FD39CC /* RenetikLayout */; };
 		04D746FF284E7E1D00EC8337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D746FE284E7E1D00EC8337 /* AppDelegate.swift */; };
 		04D74703284E7E1D00EC8337 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D74702284E7E1D00EC8337 /* MainView.swift */; };
 		04D74708284E7E1D00EC8337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04D74707284E7E1D00EC8337 /* Assets.xcassets */; };
@@ -44,7 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		040E8737284E8A78003C74EF /* renetik-ios-layout */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "renetik-ios-layout"; path = ..; sourceTree = "<group>"; };
 		041A014A284FC4C7007372AB /* SwitchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchButton.swift; sourceTree = "<group>"; };
 		041A014E284FC7A0007372AB /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		041A014F284FC7A0007372AB /* Styles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
@@ -54,6 +53,7 @@
 		041A0153284FC7A0007372AB /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		0429AAFE284FE95400FBFE96 /* ImageTitleSubtitleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTitleSubtitleButton.swift; sourceTree = "<group>"; };
 		0429AB00284FEDF600FBFE96 /* LineViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineViews.swift; sourceTree = "<group>"; };
+		04645D562850F1A600FD39CC /* renetik-ios-layout */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "renetik-ios-layout"; path = ..; sourceTree = "<group>"; };
 		04D746FB284E7E1D00EC8337 /* Renetik Layout Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Renetik Layout Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D746FE284E7E1D00EC8337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04D74702284E7E1D00EC8337 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				040E873A284E8AA3003C74EF /* RenetikLayout in Frameworks */,
+				04645D582850F1C300FD39CC /* RenetikLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,7 +179,7 @@
 		04D74731284E7EC000EC8337 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				040E8737284E8A78003C74EF /* renetik-ios-layout */,
+				04645D562850F1A600FD39CC /* renetik-ios-layout */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -201,7 +201,7 @@
 			);
 			name = "Renetik Layout Demo";
 			packageProductDependencies = (
-				040E8739284E8AA3003C74EF /* RenetikLayout */,
+				04645D572850F1C300FD39CC /* RenetikLayout */,
 			);
 			productName = "Renetik Layout Demo";
 			productReference = 04D746FB284E7E1D00EC8337 /* Renetik Layout Demo.app */;
@@ -656,7 +656,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		040E8739284E8AA3003C74EF /* RenetikLayout */ = {
+		04645D572850F1C300FD39CC /* RenetikLayout */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RenetikLayout;
 		};

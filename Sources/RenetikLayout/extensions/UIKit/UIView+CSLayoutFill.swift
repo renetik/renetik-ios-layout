@@ -3,7 +3,7 @@
 //
 
 import UIKit
-import Renetik
+import RenetikCore
 
 public extension UIView {
 

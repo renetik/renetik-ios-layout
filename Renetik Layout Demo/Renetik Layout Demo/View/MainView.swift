@@ -31,7 +31,7 @@ class MainViewController: UIViewController {
 import SwiftUI
 class MainViewPreview: PreviewProvider, CSPreviewProvider {
     static var dimension: CSPreviewDimension = .iPhone8
-    static var isPortrait = false
+    static var isPortrait = true
     class func preview(in view: UIView) {
         view.add(view: MainView.construct()).matchParent()
     }
