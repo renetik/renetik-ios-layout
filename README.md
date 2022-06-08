@@ -49,7 +49,7 @@ To run the example project, clone the repo and open Demo project.
 Open and clear mind.
 
 ## Installation
-You can instal using swift package manager for now.
+You can install using swift package manager for now.
 
 ## Author
 Renetik, [Website](https://rene-dohan.github.io)
