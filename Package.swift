@@ -14,13 +14,13 @@ let package = Package(
             targets: ["RenetikLayout"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/rene-dohan/renetik-library-ios", branch: "master"),
+        .package(url: "https://github.com/rene-dohan/renetik-ios-core", branch: "master"),
     ],
     targets: [
         .target(
             name: "RenetikLayout",
             dependencies: [
-                .product(name: "Renetik", package: "renetik-library-ios"),
+                .product(name: "RenetikCore", package: "renetik-ios-core"),
             ]
         ),
     ],
