@@ -8,13 +8,15 @@ extension UIView {
     // heightToFitSubviews cannot be used because this needs to shift subviews too
     @discardableResult
     @objc open func heightToFit() -> Self {
-        if content.notNil {
-            content!.heightToFit()
-            let masks = saveAndClearSubviewsAutoresizingMasks()
-            height(content!.height)
-            restoreSubviewsAutoresizing(masks: masks)
-        }
-        else { height(heightThatFits()) }
+//        if content.notNil {
+//            content!.heightToFit()
+//            let masks = saveAndClearSubviewsAutoresizingMasks()
+//            height(content!.height)
+//            restoreSubviewsAutoresizing(masks: masks)
+//        }
+//        else {
+            height(heightThatFits())
+//        }
         return self
     }
 }
@@ -43,13 +45,13 @@ public extension UIView {
 
     @discardableResult
     func heightByLastSubview(padding: CGFloat = 0, minimum: CGFloat = 0) -> Self {
-        let lastSubviewBottom = (content?.subviews.last?.bottom ?? subviews.last?.bottom)
+        let lastSubviewBottom = subviews.last?.bottom
         return height(lastSubviewBottom?.ret { $0 + padding } ?? minimum)
     }
 
     @discardableResult
     func heightByLastVisibleSubview(padding: CGFloat = 0, minimum: CGFloat = 0) -> Self {
-        let lastSubviewBottom = (content?.lastVisibleSubview?.bottom ?? lastVisibleSubview?.bottom)
+        let lastSubviewBottom = lastVisibleSubview?.bottom
         return height(lastSubviewBottom?.ret { $0 + padding } ?? minimum)
     }
 
@@ -171,15 +173,15 @@ public extension UIView {
 
     @discardableResult
     @objc func resizeToFit() -> Self {
-        if content.notNil {
-            content!.resizeToFit()
-            let masks = saveAndClearSubviewsAutoresizingMasks()
-            size(content!.size)
-            restoreSubviewsAutoresizing(masks: masks)
-        }
-        else {
+//        if content.notNil {
+//            content!.resizeToFit()
+//            let masks = saveAndClearSubviewsAutoresizingMasks()
+//            size(content!.size)
+//            restoreSubviewsAutoresizing(masks: masks)
+//        }
+//        else {
             size(sizeThatFits(.zero))
-        }
+//        }
         return self
     }
 

@@ -2,6 +2,10 @@ import RenetikLayout
 
 class ImageTitleSubtitleButton: CSWrapper<UIView> {
 
+    override class func construct() -> Self {
+        super.construct().background(color: .demo_control)
+    }
+
     let contentView = CSView.construct().interaction(enabled: false)
     let presetButtonLooperTrackTitle = UITextView.construct(.dummy_number).styleTitle()
     let imageView = wrap(UIImageView.construct(.chevron_right).tint(color: .demo_text_strong), paddingLeft: 5)
@@ -56,12 +60,12 @@ class ImageTitleSubtitleButton: CSWrapper<UIView> {
 }
 
 #if DEBUG
-import SwiftUI
+    import SwiftUI
 
-class ImageTitleSubtitleButtonPreview: PreviewProvider, CSPreviewProvider {
-    class func preview(in view: UIView) {
-        view.add(view: ImageTitleSubtitleButton.construct()).matchParentWidth().heightToFit()
-            .background(.demo_control)
+    class ImageTitleSubtitleButtonPreview: PreviewProvider, CSPreviewProvider {
+        class func preview(in view: UIView) {
+            view.add(view: ImageTitleSubtitleButton.construct()).matchParentWidth().heightToFit()
+                .background(.demo_control)
+        }
     }
-}
 #endif

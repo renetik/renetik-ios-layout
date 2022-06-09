@@ -16,7 +16,10 @@ public extension UITableViewCell {
         selectedBackgroundView = UIView.construct(color: color)
     }
 
-    var cellView: UIView? { contentView.content }
+    var cellView: UIView? {
+//        contentView.content
+        nil
+    } //TODO///
 
     @discardableResult
     override func heightToFit() -> Self {

@@ -1,29 +1,61 @@
 import RenetikLayout
 
 class MainView: CSView {
-    let testSwitch = SwitchButton.construct(icon: .chevron_right, title: "test")
+
+    let scrollView = UIScrollView.construct()
+    let testSwitch = SwitchButton.construct(
+        icon: .chevron_right, title: "test")
     let titleSubtitle = ImageTitleSubtitleButton.construct()
+    let headerView = HeaderSectionView.construct()
+    let expandView = ExpandSectionView.construct()
 
     override func onCreateLayout() {
         super.onCreateLayout()
         background(.demo_panel)
-        add(view: CSView.construct(), onCreate: { [unowned self] in
-            $0.add(view: testSwitch).matchParentWidth()
-                .background(.demo_control).heightToFit()
+        add(view: scrollView).matchParent().add(
+            view: CSView.construct(), onCreate: { [unowned self] in
+                $0.matchParentWidth()
+                $0.add(view: titleSubtitle,
+                    onCreate: { $0.matchParentWidth() },
+                    onLayout: { $0.fromPrevious(top: 0) })
+                $0.add(view: DemoHorizontalLineStrong.construct()).matchParentWidth().fromPrevious(top: 0)
 
-            $0.add(view: titleSubtitle, onCreate: {
-                $0.matchParentWidth().heightToFit().background(.demo_control)
-            }, onLayout: {
-                $0.fromPrevious(top: 15)
+                $0.add(view: testSwitch,
+                    onCreate: { $0.matchParentWidth() },
+                    onLayout: { $0.fromPrevious(top: 0) })
+
+                $0.add(view: headerView,
+                    onCreate: { $0.matchParentWidth() },
+                    onLayout: { $0.fromPrevious(top: 15) })
+
+                $0.add(view: expandView,
+                    onCreate: { $0.matchParentWidth() },
+                    onLayout: { $0.fromPrevious(top: 15) })
+            }, onLayout: { [unowned self] in
+                $0.from(left: leftInset).fill(right: rightInset)
+                    .heightToFit().from(top: topInset)
+                scrollView.updateContentSize()
             })
-        }, onLayout: { [unowned self] in
-            $0.from(left: leftInset).fill(right: rightInset)
-            $0.heightToFit().centeredVertical()
-        })
-        delegate.onOrientationChange { [unowned self] in updateLayout() }
+
+        delegate.onOrientationChange { [unowned self] in
+            scrollView.content.updateLayout(forced: true)
+        }
+        later { [unowned self] in
+            scrollView.content.updateLayout(forced: true)
+        }
         //debugLayoutByRandomBackgroundColor()
     }
 }
+
+//private extension UIScrollView {
+//    var content2: UIView { subviews[0] }
+//    @discardableResult
+//    func updateContentSize() -> Self {
+//        contentSize = CGSize(width: content2.right,
+//            height: content2.bottom)
+//        return self
+//    }
+//}
 
 class MainViewController: UIViewController {
     lazy var content = { MainView.construct() }()
@@ -42,14 +74,14 @@ class MainViewController: UIViewController {
 }
 
 #if DEBUG
-import SwiftUI
+    import SwiftUI
 
-class MainViewPreview: PreviewProvider, CSPreviewProvider {
-    static var dimension: CSPreviewDimension = .iPhone8
-    static var isPortrait = true
+    class MainViewPreview: PreviewProvider, CSPreviewProvider {
+        static var dimension: CSPreviewDimension = .iPhone8
+        static var isPortrait = false
 
-    class func preview(in view: UIView) {
-        view.add(view: MainView.construct()).matchParent()
+        class func preview(in view: UIView) {
+            view.add(view: MainView.construct()).matchParent()
+        }
     }
-}
 #endif

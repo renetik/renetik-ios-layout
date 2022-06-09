@@ -25,27 +25,27 @@ open class CSView: UIControl {
 
     @discardableResult
     open override func heightToFit() -> Self {
-        if content.notNil {
-            content!.heightToFit()
-            let masks = saveAndClearSubviewsAutoresizingMasks()
-            height(content!.height)
-            restoreSubviewsAutoresizing(masks: masks)
-        } else {
+//        if content.notNil {
+//            content!.heightToFit()
+//            let masks = saveAndClearSubviewsAutoresizingMasks()
+//            height(content!.height)
+//            restoreSubviewsAutoresizing(masks: masks)
+//        } else {
             heightToFitSubviews()
-        }
+//        }
         return self
     }
 
     @discardableResult
     open override func resizeToFit() -> Self {
-        if content.notNil {
-            content!.resizeToFit()
-            let masks = saveAndClearSubviewsAutoresizingMasks()
-            size(content!.size)
-            restoreSubviewsAutoresizing(masks: masks)
-        } else {
+//        if content.notNil {
+//            content!.resizeToFit()
+//            let masks = saveAndClearSubviewsAutoresizingMasks()
+//            size(content!.size)
+//            restoreSubviewsAutoresizing(masks: masks)
+//        } else {
             resizeToFitSubviews()
-        }
+//        }
         return self
     }
 }

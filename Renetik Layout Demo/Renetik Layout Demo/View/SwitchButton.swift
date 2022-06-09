@@ -5,7 +5,7 @@ class SwitchButton: CSWrapper<UIView> {
         construct().padding(left: 15, right: 5).padding(vertical: 5).also {
             $0.titleView.text(title)
             $0.imageView.image(icon)
-        }
+        }.background(color: .demo_control)
     }
 
     let contentView = CSView.construct(height: 50).interaction(enabled: false)

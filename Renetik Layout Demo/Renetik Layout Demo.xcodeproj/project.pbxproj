@@ -14,6 +14,11 @@
 		041A0157284FC7A1007372AB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A0151284FC7A0007372AB /* Colors.swift */; };
 		041A0158284FC7A1007372AB /* Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A0152284FC7A0007372AB /* Values.swift */; };
 		041A0159284FC7A1007372AB /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A0153284FC7A0007372AB /* Fonts.swift */; };
+		042396CE28527A70009E8832 /* HeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042396CC28527A70009E8832 /* HeaderSectionView.swift */; };
+		042396CF28527A70009E8832 /* IconTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042396CD28527A70009E8832 /* IconTextButton.swift */; };
+		042396D128527B8A009E8832 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042396D028527B8A009E8832 /* ButtonsView.swift */; };
+		042396D328527CF6009E8832 /* ExpandSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042396D228527CF6009E8832 /* ExpandSectionView.swift */; };
+		042396D528527D46009E8832 /* ExpandButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042396D428527D46009E8832 /* ExpandButton.swift */; };
 		0429AAFF284FE95400FBFE96 /* ImageTitleSubtitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0429AAFE284FE95400FBFE96 /* ImageTitleSubtitleButton.swift */; };
 		0429AB01284FEDF600FBFE96 /* LineViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0429AB00284FEDF600FBFE96 /* LineViews.swift */; };
 		04645D582850F1C300FD39CC /* RenetikLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 04645D572850F1C300FD39CC /* RenetikLayout */; };
@@ -52,6 +57,11 @@
 		041A0151284FC7A0007372AB /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		041A0152284FC7A0007372AB /* Values.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Values.swift; sourceTree = "<group>"; };
 		041A0153284FC7A0007372AB /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		042396CC28527A70009E8832 /* HeaderSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderSectionView.swift; sourceTree = "<group>"; };
+		042396CD28527A70009E8832 /* IconTextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconTextButton.swift; sourceTree = "<group>"; };
+		042396D028527B8A009E8832 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
+		042396D228527CF6009E8832 /* ExpandSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandSectionView.swift; sourceTree = "<group>"; };
+		042396D428527D46009E8832 /* ExpandButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandButton.swift; sourceTree = "<group>"; };
 		0429AAFE284FE95400FBFE96 /* ImageTitleSubtitleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTitleSubtitleButton.swift; sourceTree = "<group>"; };
 		0429AB00284FEDF600FBFE96 /* LineViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineViews.swift; sourceTree = "<group>"; };
 		04645D562850F1A600FD39CC /* renetik-ios-layout */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "renetik-ios-layout"; path = ..; sourceTree = "<group>"; };
@@ -120,8 +130,13 @@
 			children = (
 				04941BB9285138760002DF29 /* UIView+.swift */,
 				04D74702284E7E1D00EC8337 /* MainView.swift */,
-				041A014A284FC4C7007372AB /* SwitchButton.swift */,
 				0429AAFE284FE95400FBFE96 /* ImageTitleSubtitleButton.swift */,
+				041A014A284FC4C7007372AB /* SwitchButton.swift */,
+				042396CC28527A70009E8832 /* HeaderSectionView.swift */,
+				042396D228527CF6009E8832 /* ExpandSectionView.swift */,
+				042396D428527D46009E8832 /* ExpandButton.swift */,
+				042396D028527B8A009E8832 /* ButtonsView.swift */,
+				042396CD28527A70009E8832 /* IconTextButton.swift */,
 				0429AB00284FEDF600FBFE96 /* LineViews.swift */,
 			);
 			path = View;
@@ -322,13 +337,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				042396D328527CF6009E8832 /* ExpandSectionView.swift in Sources */,
 				04941BBA285138760002DF29 /* UIView+.swift in Sources */,
 				04D74703284E7E1D00EC8337 /* MainView.swift in Sources */,
 				041A0155284FC7A1007372AB /* Styles.swift in Sources */,
+				042396D528527D46009E8832 /* ExpandButton.swift in Sources */,
 				041A0154284FC7A1007372AB /* Images.swift in Sources */,
 				041A0157284FC7A1007372AB /* Colors.swift in Sources */,
 				041A014B284FC4C7007372AB /* SwitchButton.swift in Sources */,
+				042396D128527B8A009E8832 /* ButtonsView.swift in Sources */,
 				041A0156284FC7A1007372AB /* Strings.swift in Sources */,
+				042396CE28527A70009E8832 /* HeaderSectionView.swift in Sources */,
+				042396CF28527A70009E8832 /* IconTextButton.swift in Sources */,
 				0429AAFF284FE95400FBFE96 /* ImageTitleSubtitleButton.swift in Sources */,
 				04D746FF284E7E1D00EC8337 /* AppDelegate.swift in Sources */,
 				041A0159284FC7A1007372AB /* Fonts.swift in Sources */,

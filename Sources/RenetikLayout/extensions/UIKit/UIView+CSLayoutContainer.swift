@@ -8,15 +8,15 @@ public extension UIView {
 
     @discardableResult
     func add<View: UIView>(view: View, onCreate: ((View) -> ())? = nil) -> View {
-        content?.addSubview(view) ?? addSubview(view)
+         addSubview(view)
         onCreate?(view)
         return view
     }
 
     @discardableResult
     func add<View: UIView>(before view: View, onCreate: ((View) -> ())? = nil) -> View {
-        let index = (content?.subviews.count ?? subviews.count) - 1
-        content?.insertSubview(view, at: index) ?? insertSubview(view, at: index)
+        let index = subviews.count - 1
+        insertSubview(view, at: index)
         onCreate?(view)
         return view
     }

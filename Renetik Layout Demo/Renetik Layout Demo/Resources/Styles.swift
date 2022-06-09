@@ -9,3 +9,12 @@ extension UITextView {
         return self
     }
 }
+
+extension CSWrapper where Wrapped: UILabel {
+    internal func styleHeader() -> Self {
+        wrapped.font(.inst_caption_serif_bold)
+            .text(color: .demo_text_strong).text(align: .left).resizeToFit()
+        padding(left: 15, top: 3, bottom: 3)
+        return self
+    }
+}
