@@ -14,7 +14,7 @@ not new ways of doing things that distract you from making great products.
 
 <p align="left">
     <img src="/Images/ScreenShot1.png" width="500">
-    <img src="[/Images/ScreenShot1.png](https://github.com/renetik/renetik-ios-layout/blob/27c2f3fd882be39b9b2c4b48cfed58b3f67db02f/Images/ScreenShot1.png)" width="500">
+    <img src="https://github.com/renetik/renetik-ios-layout/blob/27c2f3fd882be39b9b2c4b48cfed58b3f67db02f/Images/ScreenShot1.png" width="500">
     
 </p>
 
