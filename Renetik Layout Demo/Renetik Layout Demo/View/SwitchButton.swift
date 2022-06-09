@@ -2,7 +2,7 @@ import RenetikLayout
 
 class SwitchButton: CSWrapper<UIView> {
     class func construct(icon: UIImage, title: String) -> Self {
-        construct().padding(left: 15).padding(right: 5).padding(vertical: 5).also {
+        construct().padding(left: 15, right: 5).padding(vertical: 5).also {
             $0.titleView.text(title)
             $0.imageView.image(icon)
         }

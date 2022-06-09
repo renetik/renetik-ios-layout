@@ -21,7 +21,7 @@ class MainView: CSView {
             $0.heightToFit().centeredVertical()
         })
         delegate.onOrientationChange { [unowned self] in updateLayout() }
-        //        debugLayoutByRandomBackgroundColor()
+        //debugLayoutByRandomBackgroundColor()
     }
 }
 
