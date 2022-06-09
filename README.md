@@ -13,7 +13,7 @@ not new ways of doing things that distract you from making great products.
 ## Example
 
 <p align="left">
-    <img src="https://github.com/renetik/renetik-ios-layout/blob/0ae677a63fa9c557135a91d21d90a8e22f824547/Images/ScreenShot1.png?raw=true" width="500">
+    <img src="/Images/ScreenShot1.png?raw=true" width="500">
 </p>
 
 ```swift
