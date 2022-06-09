@@ -4,7 +4,29 @@
 #set -e
 
 # generate docs
-jazzy --module RenetikLayout --swift-build-tool xcodebuild --build-tool-arguments -scheme,RenetikLayout-Package,-sdk,iphoneos
+#jazzy \
+#  --clean \
+#  --author Realm \
+#  --author_url https://realm.io \
+#  --source-host github \
+#  --source-host-url https://github.com/realm/realm-cocoa \
+#  --source-host-files-url https://github.com/realm/realm-cocoa/tree/v0.96.2 \
+#  --module-version 0.96.2 \
+#  --build-tool-arguments -scheme,RealmSwift \
+#  --module RealmSwift \
+#  --root-url https://realm.io/docs/swift/0.96.2/api/ \
+#  --output docs/swift_output \
+#  --theme docs/themes
+
+jazzy \
+    --clean \
+    --author Renetik \
+    --author_url https://renetik.github.io \
+    --source-host github \
+    --source-host-url https://github.com/renetik/renetik-ios-layout \
+    --module RenetikLayout \
+    --swift-build-tool xcodebuild --build-tool-arguments -scheme,RenetikLayout-Package,-sdk,iphoneos
+
 
 # navigate into the build output directory
 #cd docs
