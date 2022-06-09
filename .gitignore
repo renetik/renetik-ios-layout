@@ -67,3 +67,5 @@ iOSInjectionProject/
 .idea/
 .DS_Store
 Podfile.lock
+Package.resolved
+.build
