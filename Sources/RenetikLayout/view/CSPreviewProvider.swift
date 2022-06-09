@@ -54,7 +54,7 @@ final class CSViewRepresentable: CSObject, UIViewRepresentable {
     }
     
     func makeUIView(context: Context) -> UIView {
-        UIView.construct().also { function($0) }
+        UIView.construct().also { function($0) }.background(.systemBackground)
     }
 }
 

@@ -1,3 +1,4 @@
+import UIKit
 public protocol CSHasLayoutProtocol {
     var layoutFunctions: CSEvent<Void> { get }
     func updateLayout() -> Self
@@ -22,7 +23,7 @@ extension UIView: CSHasLayoutProtocol {
         get { (associatedDictionary["isLayoutCreated"] as? Bool) ?? false }
         set { associatedDictionary["isLayoutCreated"] = newValue }
     }
-
+    
     func onLayoutSubviews() {
         if !isDidLayoutSubviews {
             isDidLayoutSubviews = true
@@ -38,56 +39,73 @@ extension UIView: CSHasLayoutProtocol {
         }
         updateLayout()
     }
-
+    
     @objc open func onLayoutSubviewsFirstTime() {}
-
+    
     @objc open func onCreateLayout() {
         isLayoutCreated = true
     }
-
+    
     @objc open func onLayoutCreated() {}
-
+    
     @objc open func onUpdateLayout() {}
-
+    
     @discardableResult
     @objc open func updateLayout() -> Self { layoutFunctions.fire(); return self }
-
-    public func updateLayoutLater() {
-        later(seconds: 0.15) { [unowned self] in updateLayout() }
+    
+    @discardableResult
+    public func updateLayout(forced:Bool = false) -> Self {
+        forced ? updateLayoutForced() : updateLayout()
     }
-
+    
+    @discardableResult
+    public func updateLayoutForced() -> Self {
+        var view:UIView? = self
+        while view.notNil {
+            view!.updateLayout()
+            view = view!.superview
+        }
+        return self
+    }
+    
+    @discardableResult
+    public func updateLayoutLater(forced:Bool = false) -> Self {
+        later(seconds: 0.15) { [unowned self] in updateLayout(forced: forced) }
+        return self
+    }
+    
     @discardableResult
     public func add<View: UIView>(
         view: View,
         onCreate: ArgFunc<View>? = nil,
         onLayout: @escaping ArgFunc<View>) -> View {
-        add(view: view)
-        onCreate?(view)
-        layoutFunctions.listen {
+            add(view: view)
+            onCreate?(view)
+            layoutFunctions.listen {
+                view.layoutSubviews()
+                onLayout(view)
+            }
             view.layoutSubviews()
             onLayout(view)
+            return view
         }
-        view.layoutSubviews()
-        onLayout(view)
-        return view
-    }
-
+    
     @discardableResult
     public func add<View: UIView>(
         view: View,
         onCreate: Func? = nil,
         onLayout: @escaping Func) -> View {
-        add(view: view)
-        onCreate?()
-        layoutFunctions.listen {
+            add(view: view)
+            onCreate?()
+            layoutFunctions.listen {
+                view.layoutSubviews()
+                onLayout()
+            }
             view.layoutSubviews()
             onLayout()
+            return view
         }
-        view.layoutSubviews()
-        onLayout()
-        return view
-    }
-
+    
     @discardableResult
     public func layout<View: UIView>(_ view: View, onLayout: @escaping (View) -> Void) -> View {
         layoutFunctions.listen {
@@ -98,14 +116,14 @@ extension UIView: CSHasLayoutProtocol {
         onLayout(view)
         return view
     }
-
+    
     @discardableResult
     public func layout(function: @escaping Func) -> Self {
         layoutFunctions.listen { function() }
         function()
         return self
     }
-
+    
     @discardableResult
     public func layout(function: @escaping (Self) -> Void) -> Self {
         layoutFunctions.listen { [unowned self] in function(self) }
@@ -115,7 +133,7 @@ extension UIView: CSHasLayoutProtocol {
 }
 
 public extension CSHasLayoutProtocol where Self: UIView {
-
+    
     static func row(fixed leftView: UIView, margin: CGFloat = 0, sizedToFit rightView: UIView) -> Self {
         Self.construct().also { container in
             container.layout(container.add(view: leftView).from(left: 0)) {
@@ -126,11 +144,11 @@ public extension CSHasLayoutProtocol where Self: UIView {
             }
         }.resizeToFit()
     }
-
+    
     func row(fixed leftView: UIView, margin: CGFloat = 0, sizedToFit rightView: UIView) -> UIView {
         CSView.row(fixed: leftView, margin: margin, sizedToFit: rightView)
     }
-
+    
     static func row(flexible leftView: UIView, margin: CGFloat = 0, flexible rightView: UIView) -> Self {
         Self.construct().also { container in
             container.layout(container.add(view: leftView).from(left: 0)) {
@@ -141,11 +159,11 @@ public extension CSHasLayoutProtocol where Self: UIView {
             }
         }
     }
-
+    
     func row(flexible leftView: UIView, margin: CGFloat = 0, flexible rightView: UIView) -> CSView {
         CSView.row(flexible: leftView, margin: margin, flexible: rightView)
     }
-
+    
     static func row(flexible leftView: UIView, margin: CGFloat = 0, fixed rightView: UIView) -> Self {
         Self.construct().also { container in
             container.add(view: rightView).from(right: 0).centeredVertical()
@@ -154,11 +172,11 @@ public extension CSHasLayoutProtocol where Self: UIView {
             }
         }.resizeToFit()
     }
-
+    
     func row(flexible leftView: UIView, margin: CGFloat = 0, fixed rightView: UIView) -> CSView {
         CSView.row(flexible: leftView, margin: margin, fixed: rightView)
     }
-
+    
     static func row(fixed leftView: UIView, margin: CGFloat = 0, flexible rightView: UIView) -> Self {
         Self.construct(defaultSize: true).also { container in
             container.add(view: leftView).from(left: 0).centeredVertical()
@@ -167,11 +185,11 @@ public extension CSHasLayoutProtocol where Self: UIView {
             }
         }.resizeToFit()
     }
-
+    
     func row(fixed leftView: UIView, margin: CGFloat = 0, flexible rightView: UIView) -> CSView {
         CSView.row(fixed: leftView, margin: margin, flexible: rightView)
     }
-
+    
     static func column(top topView: UIView, margin: CGFloat = 0, bottom bottomView: UIView) -> Self {
         Self.construct(defaultSize: true).also { container in
             container.layout(container.add(view: topView).from(top: 0).matchParentWidth()) {
