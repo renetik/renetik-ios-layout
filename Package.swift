@@ -14,7 +14,7 @@ let package = Package(
             targets: ["RenetikLayout"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/renetik/renetik-ios-core", "0.9.0" ..< "1.0.0" ),
+        .package(url: "https://github.com/renetik/renetik-ios-core", "0.9.1" ..< "0.9.1" ),
     ],
     targets: [
         .target(
