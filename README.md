@@ -13,7 +13,7 @@ not new ways of doing things that distract you from making great products.
 ## Example
 
 <p align="left">
-    <img src="{{site.baseurl}}/Images/ScreenShot1.png" width="500">
+    <img src="./Images/ScreenShot1.png" width="500">
 </p>
 
 ```swift
