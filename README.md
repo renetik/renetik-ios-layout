@@ -97,7 +97,7 @@ class ButtonsView: CSView {
 }
 ```
 <p align="center">
-    <img src="https://github.com/renetik/renetik-ios-layout/blob/8abf20caafd3c2ce8b1882114e71968a8e246878/Images/Code2.png?raw=true" height="500">
+    <img src="https://raw.githubusercontent.com/renetik/renetik-ios-layout/master/Images/Code2.png?raw=true" height="500">
 </p>
 
 ## Demo
