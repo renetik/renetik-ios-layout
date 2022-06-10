@@ -67,9 +67,6 @@
             <a href="Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Extensions/CGPoint.html">CGPoint</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Extensions/CGRect.html">CGRect</a>
               </li>
               <li class="nav-group-task">
@@ -165,35 +162,95 @@ not new ways of doing things that distract you from making great products.</p>
 <h2 id='example' class='heading'>Example</h2>
 
 <p align="left">
-    <img src="https://github.com/renetik/renetik-ios-layout/blob/27c2f3fd882be39b9b2c4b48cfed58b3f67db02f/Images/ScreenShot1.png?raw=true" width="500">
+    <img src="https://github.com/renetik/renetik-ios-layout/blob/4ab8be927dd354bbea8dc3a6af8fc6be53c5770b/Images/Simulator2.png?raw=true" height="500">
+    <img src="https://github.com/renetik/renetik-ios-layout/blob/4ab8be927dd354bbea8dc3a6af8fc6be53c5770b/Images/Simulator1.png?raw=true" width="500">
 </p>
+
+<p>Readability and simplicity of approach are the solutions for maintainable code base. Using SwiftUI preview opened new previously unimaginable possibilities, where even advanced editor of Android Studio strugles. Write beatiful code while be in control of what is really happening with full access to make any fix necessary easily.</p>
 <pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">RenetikLayout</span>
 
-<span class="kd">class</span> <span class="kt">MainView</span><span class="p">:</span> <span class="kt">CSView</span> <span class="p">{</span>
+<span class="kd">class</span> <span class="kt">HeaderSectionView</span><span class="p">:</span> <span class="kt">CSView</span> <span class="p">{</span>
+
+    <span class="k">override</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">construct</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="k">Self</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">construct</span><span class="p">()</span><span class="o">.</span><span class="nf">background</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="o">.</span><span class="n">demo_control</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">let</span> <span class="nv">header</span> <span class="o">=</span> <span class="nf">wrap</span><span class="p">(</span><span class="kt">UILabel</span><span class="o">.</span><span class="nf">construct</span><span class="p">(</span><span class="s">"App"</span><span class="p">))</span><span class="o">.</span><span class="nf">styleHeader</span><span class="p">()</span>
+    <span class="k">let</span> <span class="nv">buttons</span> <span class="o">=</span> <span class="kt">ButtonsView</span><span class="o">.</span><span class="nf">construct</span><span class="p">()</span>
+
     <span class="k">override</span> <span class="kd">func</span> <span class="nf">onCreateLayout</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">super</span><span class="o">.</span><span class="nf">onCreateLayout</span><span class="p">()</span>
-        <span class="nf">background</span><span class="p">(</span><span class="o">.</span><span class="n">demo_panel</span><span class="p">)</span>
-        <span class="nf">add</span><span class="p">(</span><span class="nv">view</span><span class="p">:</span> <span class="kt">CSView</span><span class="o">.</span><span class="nf">construct</span><span class="p">(),</span> <span class="nv">onCreate</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nv">$0</span><span class="o">.</span><span class="nf">matchParentWidth</span><span class="p">()</span>
-            <span class="nv">$0</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">view</span><span class="p">:</span> <span class="kt">SwitchButton</span><span class="o">.</span><span class="nf">construct</span><span class="p">(</span><span class="nv">icon</span><span class="p">:</span> <span class="o">.</span><span class="n">chevron_right</span><span class="p">,</span> <span class="nv">title</span><span class="p">:</span> <span class="s">"test"</span><span class="p">))</span>
-                <span class="o">.</span><span class="nf">matchParentWidth</span><span class="p">()</span>
-                <span class="o">.</span><span class="nf">background</span><span class="p">(</span><span class="o">.</span><span class="n">demo_control</span><span class="p">)</span><span class="o">.</span><span class="nf">heightToFit</span><span class="p">()</span>
+        <span class="nf">add</span><span class="p">(</span><span class="nv">view</span><span class="p">:</span> <span class="n">header</span><span class="p">)</span><span class="o">.</span><span class="nf">matchParentWidth</span><span class="p">()</span><span class="o">.</span><span class="nf">from</span><span class="p">(</span><span class="nv">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="nf">add</span><span class="p">(</span><span class="nv">view</span><span class="p">:</span> <span class="kt">DemoHorizontalLineStrong</span><span class="o">.</span><span class="nf">constructMedium</span><span class="p">())</span>
+            <span class="o">.</span><span class="nf">fromPrevious</span><span class="p">(</span><span class="nv">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="nf">matchParentWidth</span><span class="p">()</span>
+        <span class="nf">add</span><span class="p">(</span><span class="nv">view</span><span class="p">:</span> <span class="n">buttons</span><span class="p">)</span><span class="o">.</span><span class="nf">fromPrevious</span><span class="p">(</span><span class="nv">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="nf">matchParentWidth</span><span class="p">()</span>
+        <span class="nf">heightByLastSubview</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 
-            <span class="nv">$0</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">view</span><span class="p">:</span> <span class="kt">ImageTitleSubtitleButton</span><span class="o">.</span><span class="nf">construct</span><span class="p">(),</span> <span class="nv">onCreate</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nv">$0</span><span class="o">.</span><span class="nf">matchParentWidth</span><span class="p">()</span><span class="o">.</span><span class="nf">heightToFit</span><span class="p">()</span><span class="o">.</span><span class="nf">background</span><span class="p">(</span><span class="o">.</span><span class="n">demo_control</span><span class="p">)</span>
-            <span class="p">},</span> <span class="nv">onLayout</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nv">$0</span><span class="o">.</span><span class="nf">fromPrevious</span><span class="p">(</span><span class="nv">top</span><span class="p">:</span> <span class="mi">15</span><span class="p">)</span>
+<span class="cp">#if DEBUG</span>
+    <span class="kd">import</span> <span class="kt">SwiftUI</span>
+    <span class="kd">class</span> <span class="kt">AppPreview</span><span class="p">:</span> <span class="kt">PreviewProvider</span><span class="p">,</span> <span class="kt">CSPreviewProvider</span> <span class="p">{</span>
+        <span class="kd">class</span> <span class="kd">func</span> <span class="nf">preview</span><span class="p">(</span><span class="k">in</span> <span class="nv">view</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">view</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">view</span><span class="p">:</span> <span class="kt">HeaderSectionView</span><span class="o">.</span><span class="nf">construct</span><span class="p">())</span>
+                <span class="o">.</span><span class="nf">matchParentWidth</span><span class="p">()</span><span class="o">.</span><span class="nf">heightToFit</span><span class="p">()</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="cp">#endif</span>
+</code></pre>
+
+<p align="center">
+    <img src="https://github.com/renetik/renetik-ios-layout/blob/427bdc55b71bc629fe93da856fba5e05d533dcae/Images/Code1.png?raw=true" height="500">
+</p>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">ButtonsView</span><span class="p">:</span> <span class="kt">CSView</span> <span class="p">{</span>
+    <span class="k">override</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">construct</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="k">Self</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">construct</span><span class="p">()</span><span class="o">.</span><span class="nf">background</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="o">.</span><span class="n">demo_control</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">let</span> <span class="nv">moveButton</span> <span class="o">=</span> <span class="kt">IconTextButton</span><span class="o">.</span><span class="nf">construct</span><span class="p">(</span><span class="nv">icon</span><span class="p">:</span> <span class="o">.</span><span class="n">open_with</span><span class="p">,</span> <span class="nv">title</span><span class="p">:</span> <span class="s">"Move"</span><span class="p">)</span>
+    <span class="k">let</span> <span class="nv">resizeButton</span> <span class="o">=</span> <span class="kt">IconTextButton</span><span class="o">.</span><span class="nf">construct</span><span class="p">(</span><span class="nv">icon</span><span class="p">:</span> <span class="o">.</span><span class="n">fit_screen</span><span class="p">,</span> <span class="nv">title</span><span class="p">:</span> <span class="s">"Resize"</span><span class="p">)</span>
+    <span class="k">let</span> <span class="nv">scalesButton</span> <span class="o">=</span> <span class="kt">IconTextButton</span><span class="o">.</span><span class="nf">construct</span><span class="p">(</span><span class="nv">icon</span><span class="p">:</span> <span class="o">.</span><span class="n">aspect_ratio</span><span class="p">,</span> <span class="nv">title</span><span class="p">:</span> <span class="s">"Scales"</span><span class="p">)</span>
+    <span class="k">let</span> <span class="nv">typeButton</span> <span class="o">=</span> <span class="kt">IconTextButton</span><span class="o">.</span><span class="nf">construct</span><span class="p">(</span><span class="nv">icon</span><span class="p">:</span> <span class="o">.</span><span class="n">dashboard</span><span class="p">,</span> <span class="nv">title</span><span class="p">:</span> <span class="s">"Type"</span><span class="p">)</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">onCreateLayout</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">onCreateLayout</span><span class="p">()</span>
+        <span class="nf">add</span><span class="p">(</span><span class="nv">view</span><span class="p">:</span> <span class="kt">CSView</span><span class="o">.</span><span class="nf">construct</span><span class="p">(),</span>
+            <span class="nv">onCreate</span><span class="p">:</span> <span class="p">{</span> <span class="p">[</span><span class="k">unowned</span> <span class="k">self</span><span class="p">]</span> <span class="n">horizontalView</span> <span class="k">in</span>
+                <span class="n">horizontalView</span><span class="o">.</span><span class="nf">fromPrevious</span><span class="p">(</span><span class="nv">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="nf">matchParentWidth</span><span class="p">()</span><span class="o">.</span><span class="nf">height</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+                <span class="n">horizontalView</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">view</span><span class="p">:</span> <span class="n">moveButton</span><span class="p">,</span>
+                    <span class="nv">onCreate</span><span class="p">:</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="nf">from</span><span class="p">(</span><span class="nv">left</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="nf">matchParentHeight</span><span class="p">()</span> <span class="p">},</span>
+                    <span class="nv">onLayout</span><span class="p">:</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="nf">width</span><span class="p">(</span><span class="n">horizontalView</span><span class="o">.</span><span class="n">width</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="p">})</span>
+                <span class="n">horizontalView</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">view</span><span class="p">:</span> <span class="kt">VerticalLine</span><span class="o">.</span><span class="nf">constructMedium</span><span class="p">(),</span>
+                    <span class="nv">onCreate</span><span class="p">:</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="nf">matchParentHeight</span><span class="p">()</span> <span class="p">},</span>
+                    <span class="nv">onLayout</span><span class="p">:</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="nf">fromPrevious</span><span class="p">(</span><span class="nv">left</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span> <span class="p">})</span>
+                <span class="n">horizontalView</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">view</span><span class="p">:</span> <span class="n">resizeButton</span><span class="p">,</span>
+                    <span class="nv">onCreate</span><span class="p">:</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="nf">matchParentHeight</span><span class="p">()</span> <span class="p">},</span>
+                    <span class="nv">onLayout</span><span class="p">:</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="nf">fromPrevious</span><span class="p">(</span><span class="nv">left</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="nf">width</span><span class="p">(</span><span class="n">horizontalView</span><span class="o">.</span><span class="n">width</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="p">})</span>
             <span class="p">})</span>
-        <span class="p">},</span> <span class="nv">onLayout</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nv">$0</span><span class="o">.</span><span class="nf">heightToFit</span><span class="p">()</span><span class="o">.</span><span class="nf">centeredVertical</span><span class="p">()</span>
-        <span class="p">})</span>
-        <span class="c1">//        debugLayoutByRandomBackgroundColor()</span>
+        <span class="nf">add</span><span class="p">(</span><span class="nv">view</span><span class="p">:</span> <span class="kt">HorizontalLineStrong</span><span class="o">.</span><span class="nf">constructMedium</span><span class="p">())</span>
+            <span class="o">.</span><span class="nf">fromPrevious</span><span class="p">(</span><span class="nv">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="nf">matchParentWidth</span><span class="p">()</span>
+        <span class="nf">add</span><span class="p">(</span><span class="nv">view</span><span class="p">:</span> <span class="kt">CSView</span><span class="o">.</span><span class="nf">construct</span><span class="p">(),</span>
+            <span class="nv">onCreate</span><span class="p">:</span> <span class="p">{</span> <span class="p">[</span><span class="k">unowned</span> <span class="k">self</span><span class="p">]</span> <span class="n">horizontalView</span> <span class="k">in</span>
+                <span class="n">horizontalView</span><span class="o">.</span><span class="nf">fromPrevious</span><span class="p">(</span><span class="nv">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="nf">matchParentWidth</span><span class="p">()</span><span class="o">.</span><span class="nf">height</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+                <span class="n">horizontalView</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">view</span><span class="p">:</span> <span class="n">scalesButton</span><span class="p">,</span>
+                    <span class="nv">onCreate</span><span class="p">:</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="nf">from</span><span class="p">(</span><span class="nv">left</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="nf">matchParentHeight</span><span class="p">()</span> <span class="p">},</span>
+                    <span class="nv">onLayout</span><span class="p">:</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="nf">width</span><span class="p">(</span><span class="n">horizontalView</span><span class="o">.</span><span class="n">width</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="p">})</span>
+                <span class="n">horizontalView</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">view</span><span class="p">:</span> <span class="kt">VerticalLine</span><span class="o">.</span><span class="nf">constructMedium</span><span class="p">(),</span>
+                    <span class="nv">onCreate</span><span class="p">:</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="nf">matchParentHeight</span><span class="p">()</span> <span class="p">},</span>
+                    <span class="nv">onLayout</span><span class="p">:</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="nf">fromPrevious</span><span class="p">(</span><span class="nv">left</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span> <span class="p">})</span>
+                <span class="n">horizontalView</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">view</span><span class="p">:</span> <span class="n">typeButton</span><span class="p">,</span>
+                    <span class="nv">onCreate</span><span class="p">:</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="nf">matchParentHeight</span><span class="p">()</span> <span class="p">},</span>
+                    <span class="nv">onLayout</span><span class="p">:</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="nf">fromPrevious</span><span class="p">(</span><span class="nv">left</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="nf">fill</span><span class="p">(</span><span class="nv">right</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span> <span class="p">})</span>
+            <span class="p">})</span>
+        <span class="nf">heightByLastSubview</span><span class="p">()</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
+
+<p align="center">
+    <img src="https://github.com/renetik/renetik-ios-layout/blob/master/Images/Code3.png?raw=true" height="500">
+</p>
 <h2 id='demo' class='heading'>Demo</h2>
 
-<p>To run the example project, clone the repo and open Demo project.</p>
+<p>To run the example project, clone the repo and open Demo project. It is demonstration of some of best approaches I use in iOS development, but more will come in other libraries.</p>
 <h2 id='requirements' class='heading'>Requirements</h2>
 
 <p>Open and clear mind.</p>
@@ -202,7 +259,8 @@ not new ways of doing things that distract you from making great products.</p>
 <p>You can install using swift package manager for now using latest released version.</p>
 <h2 id='author' class='heading'>Author</h2>
 
-<p>Renetik, <a href="https://rene-dohan.github.io">Website</a></p>
+<p>Renetik, <a href="https://renetik.github.io">Website</a></p>
+<h2 id='hire-me-or-check-out-a-href-https-renetik-com-renetik-instruments-a' class='heading'>Hire me ! or check out <a href="https://renetik.com">Renetik Instruments</a></h2>
 <h2 id='license' class='heading'>License</h2>
 
 <p>Renetik Layout is available under the MIT license. See the LICENSE file for more info.</p>
@@ -210,7 +268,7 @@ not new ways of doing things that distract you from making great products.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="https://renetik.github.io" target="_blank" rel="external noopener">Renetik</a>. All rights reserved. (Last updated: 2022-06-09)</p>
+          <p>&copy; 2022 <a class="link" href="https://renetik.github.io" target="_blank" rel="external noopener">Renetik</a>. All rights reserved. (Last updated: 2022-06-10)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>

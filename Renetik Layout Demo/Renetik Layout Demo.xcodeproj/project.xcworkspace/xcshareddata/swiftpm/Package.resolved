@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/renetik/renetik-ios-core",
       "state" : {
-        "branch" : "master",
-        "revision" : "c47253d80a3f8c40d03ecf9ce301a5f87f185087"
+        "revision" : "a8c8508ac66235dee695deb8320747e89414b55c",
+        "version" : "0.9.2"
       }
     }
   ],
