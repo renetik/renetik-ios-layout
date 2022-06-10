@@ -48,7 +48,7 @@ class HeaderSectionView: CSView {
     }
 #endif
 ```
-<p align="left">
+<p align="center">
     <img src="https://github.com/renetik/renetik-ios-layout/blob/427bdc55b71bc629fe93da856fba5e05d533dcae/Images/Code1.png?raw=true" height="500">
 </p>
 
