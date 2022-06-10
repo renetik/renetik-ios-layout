@@ -21,24 +21,4 @@ public extension UIColor {
 
     static let demo_border = UIColor("#272525")!
     static let demo_border_strong = UIColor("#232525")!
-
-    static let demo_key_piano_primary = UIColor("#1E1E1E")!
-    static let demo_key_piano_primary_pressed = UIColor("#272727")!
-    static let demo_key_piano_primary_text = demo_text_strong
-    static let demo_key_piano_primary_text_subtle = demo_text_subtle
-
-    static let demo_key_piano_secondary = UIColor("#595959")!
-    static let demo_key_piano_secondary_pressed = UIColor("#323232")!
-
-    static let demo_key_primary = UIColor("#595959")!
-    static let demo_key_primary_pressed = UIColor("#323232")!
-    static let demo_key_primary_text = demo_text_strong
-    static let demo_key_primary_text_subtle = demo_text_subtle
-
-    static let demo_key_secondary = demo_key_piano_primary
-    static let demo_key_secondary_pressed = demo_key_piano_primary_pressed
-    static let demo_key_secondary_selected = UIColor("#0D38AD")!
-    static let demo_key_secondary_text = demo_key_piano_primary_text
-
-    static let demo_split_controller_split = demo_surface
 }

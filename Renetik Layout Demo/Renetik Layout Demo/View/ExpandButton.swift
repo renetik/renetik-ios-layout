@@ -9,7 +9,7 @@ class ExpandButton: CSWrapper<UIView> {
     }
 
     let contentView = CSView.construct(height: 50).interaction(enabled: false)
-    let titleView = UILabel.construct().font(.inst_button).text(color: .demo_text_strong)
+    let titleView = UILabel.construct().font(.demo_button).text(color: .demo_text_strong)
     let imageView = UIImageView.construct(.chevron_right).tint(color: .demo_text_strong).size(30)
 
     override func onCreateLayout() {

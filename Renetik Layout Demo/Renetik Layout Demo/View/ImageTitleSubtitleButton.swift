@@ -9,9 +9,9 @@ class ImageTitleSubtitleButton: CSWrapper<UIView> {
     let contentView = CSView.construct().interaction(enabled: false)
     let presetButtonLooperTrackTitle = UITextView.construct(.dummy_number).styleTitle()
     let imageView = wrap(UIImageView.construct(.chevron_right).tint(color: .demo_text_strong), paddingLeft: 5)
-    let textView1 = wrap(UILabel.construct(.dummy_complete).font(.inst_button).text(color: .demo_text_strong)
+    let textView1 = wrap(UILabel.construct(.dummy_complete).font(.demo_button).text(color: .demo_text_strong)
         , paddingLeft: 5, paddingRight: 5, paddingTop: 3, paddingBottom: 3)
-    let textView2 = wrap(UILabel.construct(.dummy_complete).font(.inst_caption).text(color: .demo_text_subtle)
+    let textView2 = wrap(UILabel.construct(.dummy_complete).font(.demo_caption).text(color: .demo_text_subtle)
         , paddingLeft: 5, paddingRight: 5, paddingTop: 3, paddingBottom: 5)
 
     override func onCreateLayout() {

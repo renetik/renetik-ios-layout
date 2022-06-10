@@ -9,7 +9,7 @@ class ExpandSectionView: CSView {
     let headerButton = ExpandButton.construct("Configuration")
     let lineView = DemoHorizontalLineStrong.constructMedium()
     let itemsFrame = CSView.construct()
-    let buttonsView = ButtonsView.construct()
+    let buttons = ButtonsView.construct()
 
     override func onCreateLayout() {
         super.onCreateLayout()
@@ -18,7 +18,7 @@ class ExpandSectionView: CSView {
         add(view: itemsFrame,
             onCreate: { [unowned self] in
                 $0.matchParentWidth()
-                $0.add(view: buttonsView,
+                $0.add(view: buttons,
                     onCreate: { $0.matchParentWidth() },
                     onLayout: { $0.heightToFit() })
             },

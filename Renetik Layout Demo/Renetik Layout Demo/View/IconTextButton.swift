@@ -13,7 +13,7 @@ class IconTextButton: CSWrapper<UIView> {
         .interaction(enabled: false)
     let imageView = UIImageView.construct(.chevron_right)
         .tint(color: .demo_text_strong)
-    let textView = UILabel.construct().font(.inst_button)
+    let textView = UILabel.construct().font(.demo_button)
         .text(color: .demo_text_strong)
 
     override func onCreateLayout() {

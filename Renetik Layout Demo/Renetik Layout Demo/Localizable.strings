@@ -1,0 +1,20 @@
+//CS
+cs_dialog_cancel="Cancel";
+cs_dialog_yes="Yes";
+cs_dialog_ok="Ok";
+cs_dialog_no="No";
+
+cs_request_loading="Loading...";
+cs_request_retry="Retry";
+cs_request_cancel="Cancel";
+cs_request_failed_message="Request failed";
+
+cs_table_load_next_failed_message="Loading failed";
+
+cs_operation_canceled_message="Operation canceled";
+cs_operation_failed_message="Operation failed";
+
+cs_search_placeholder="Search";
+
+cs_image_picker_choose_photo="Choose foto";
+cs_image_picker_take_picture="Take foto";

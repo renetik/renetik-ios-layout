@@ -6,13 +6,13 @@ class ButtonsView: CSView {
         super.construct().background(color: .demo_control)
     }
 
-    let upgradeButton = IconTextButton.construct(
+    let moveButton = IconTextButton.construct(
         icon: .chevron_right, title: "Move")
-    let supportButton = IconTextButton.construct(
+    let resizeButton = IconTextButton.construct(
         icon: .chevron_right, title: "Resize")
-    let themeButton = IconTextButton.construct(
+    let scalesButton = IconTextButton.construct(
         icon: .chevron_right, title: "Scales")
-    let settingsButton = IconTextButton.construct(
+    let typeButton = IconTextButton.construct(
         icon: .chevron_right, title: "Type")
 
     override func onCreateLayout() {
@@ -20,13 +20,13 @@ class ButtonsView: CSView {
         add(view: CSView.construct(),
             onCreate: { [unowned self] horizontalView in
                 horizontalView.fromPrevious(top: 0).matchParentWidth().height(60)
-                horizontalView.add(view: upgradeButton,
+                horizontalView.add(view: moveButton,
                     onCreate: { $0.from(left: 0).matchParentHeight() },
-                    onLayout: { [unowned self] in $0.width((horizontalView.width - rightInset) / 2) })
+                    onLayout: { $0.width(horizontalView.width / 2) })
                 horizontalView.add(view: DemoVerticalLine.constructMedium(),
                     onCreate: { $0.matchParentHeight() },
                     onLayout: { $0.fromPrevious(left: 0) })
-                horizontalView.add(view: supportButton,
+                horizontalView.add(view: resizeButton,
                     onCreate: { $0.matchParentHeight() },
                     onLayout: { $0.fromPrevious(left: 0).width(horizontalView.width / 2) })
             })
@@ -35,13 +35,13 @@ class ButtonsView: CSView {
         add(view: CSView.construct(),
             onCreate: { [unowned self] horizontalView in
                 horizontalView.fromPrevious(top: 0).matchParentWidth().height(60)
-                horizontalView.add(view: themeButton,
+                horizontalView.add(view: scalesButton,
                     onCreate: { $0.from(left: 0).matchParentHeight() },
-                    onLayout: { [unowned self] in $0.width((horizontalView.width - rightInset) / 2) })
+                    onLayout: { $0.width(horizontalView.width / 2) })
                 horizontalView.add(view: DemoVerticalLine.constructMedium(),
                     onCreate: { $0.matchParentHeight() },
                     onLayout: { $0.fromPrevious(left: 0) })
-                horizontalView.add(view: settingsButton,
+                horizontalView.add(view: typeButton,
                     onCreate: { $0.matchParentHeight() },
                     onLayout: { $0.fromPrevious(left: 0).fill(right: 0) })
             })
@@ -51,10 +51,10 @@ class ButtonsView: CSView {
 
     override func onLayoutCreated() {
         super.onLayoutCreated()
-        upgradeButton.onClick { logInfo() }
-        supportButton.onClick { logInfo() }
-        themeButton.onClick { logInfo() }
-        settingsButton.onClick { logInfo() }
+        moveButton.onClick { logInfo() }
+        resizeButton.onClick { logInfo() }
+        scalesButton.onClick { logInfo() }
+        typeButton.onClick { logInfo() }
     }
 }
 

@@ -3,7 +3,7 @@ import RenetikLayout
 extension UITextView {
     public func styleTitle() -> Self {
         asLabel()
-        font = .inst_caption_serif_bold
+        font = .demo_caption_serif_bold
         textColor = .demo_text_strong
         text(align: .center)
         return self
@@ -12,7 +12,7 @@ extension UITextView {
 
 extension CSWrapper where Wrapped: UILabel {
     internal func styleHeader() -> Self {
-        wrapped.font(.inst_caption_serif_bold)
+        wrapped.font(.demo_caption_serif_bold)
             .text(color: .demo_text_strong).text(align: .left).resizeToFit()
         padding(left: 15, top: 3, bottom: 3)
         return self
