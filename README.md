@@ -20,28 +20,37 @@ not new ways of doing things that distract you from making great products.
 ```swift
 import RenetikLayout
 
-class MainView: CSView {
+class HeaderSectionView: CSView {
+    
+    override class func construct() -> Self {
+        super.construct().background(color: .demo_control)
+    }
+    let header = wrap(UILabel.construct("App")).styleHeader()
+    let buttons = ButtonsView.construct()
+
     override func onCreateLayout() {
         super.onCreateLayout()
-        background(.demo_panel)
-        add(view: CSView.construct(), onCreate: {
-            $0.matchParentWidth()
-            $0.add(view: SwitchButton.construct(icon: .chevron_right, title: "test"))
-                .matchParentWidth()
-                .background(.demo_control).heightToFit()
-            
-            $0.add(view: ImageTitleSubtitleButton.construct(), onCreate: {
-                $0.matchParentWidth().heightToFit().background(.demo_control)
-            }, onLayout: {
-                $0.fromPrevious(top: 15)
-            })
-        }, onLayout: {
-            $0.heightToFit().centeredVertical()
-        })
-        //        debugLayoutByRandomBackgroundColor()
+        add(view: header).matchParentWidth().from(top: 0)
+        add(view: DemoHorizontalLineStrong.constructMedium())
+            .fromPrevious(top: 0).matchParentWidth()
+        add(view: buttons).fromPrevious(top: 0).matchParentWidth()
+        heightByLastSubview()
     }
 }
+
+#if DEBUG
+    import SwiftUI
+    class AppPreview: PreviewProvider, CSPreviewProvider {
+        class func preview(in view: UIView) {
+            view.add(view: HeaderSectionView.construct())
+                .matchParentWidth().heightToFit()
+        }
+    }
+#endif
 ```
+<p align="center">
+    <img src="https://github.com/renetik/renetik-ios-layout/blob/427bdc55b71bc629fe93da856fba5e05d533dcae/Images/Code1.png?raw=true" height="500">
+</p>
 
 ## Demo
 To run the example project, clone the repo and open Demo project.
