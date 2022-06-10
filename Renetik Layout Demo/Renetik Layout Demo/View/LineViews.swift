@@ -1,6 +1,6 @@
 import RenetikLayout
 
-class DemoVerticalLine: CSWrapper<UIView> {
+class VerticalLine: CSWrapper<UIView> {
     override class func construct() -> Self {
         super.construct().wrap(UIView.construct(
             color: .demo_border).width(.line_width))
@@ -11,7 +11,7 @@ class DemoVerticalLine: CSWrapper<UIView> {
     }
 }
 
-class DemoVerticalLineStrong: CSWrapper<UIView> {
+class VerticalLineStrong: CSWrapper<UIView> {
     override class func construct() -> Self {
         super.construct().wrap(UIView.construct(
             color: .demo_border_strong).width(.line_width))
@@ -22,7 +22,7 @@ class DemoVerticalLineStrong: CSWrapper<UIView> {
     }
 }
 
-class DemoHorizontalLine: CSWrapper<UIView> {
+class HorizontalLine: CSWrapper<UIView> {
     override class func construct() -> Self {
         super.construct().wrap(UIView.construct(
             color: .demo_border).height(.line_width))
@@ -33,7 +33,7 @@ class DemoHorizontalLine: CSWrapper<UIView> {
     }
 }
 
-class DemoHorizontalLineStrong: CSWrapper<UIView> {
+class HorizontalLineStrong: CSWrapper<UIView> {
     override class func construct() -> Self {
         super.construct().wrap(UIView.construct(
             color: .demo_border_strong).height(.line_width))

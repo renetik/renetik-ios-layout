@@ -20,7 +20,7 @@ class ImageTitleSubtitleButton: CSWrapper<UIView> {
         wrap(contentView)
         contentView.add(view: presetButtonLooperTrackTitle)
             .matchParentWidth().from(top: 0).padding(vertical: 3)
-        contentView.add(view: DemoHorizontalLineStrong.constructMedium())
+        contentView.add(view: HorizontalLineStrong.constructMedium())
             .fromPrevious(top: 0).matchParentWidth()
         contentView.add(view: CSView.construct(),
             onCreate: { [unowned self] horizontalView in

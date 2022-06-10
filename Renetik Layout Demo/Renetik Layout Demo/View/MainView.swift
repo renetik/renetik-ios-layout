@@ -19,7 +19,7 @@ class MainView: CSView {
                 $0.add(view: titleSubtitle,
                     onCreate: { $0.matchParentWidth() },
                     onLayout: { $0.fromPrevious(top: 0) })
-                $0.add(view: DemoHorizontalLineStrong.construct())
+                $0.add(view: HorizontalLineStrong.construct())
                     .matchParentWidth().fromPrevious(top: 0)
                 $0.add(view: testSwitch,
                     onCreate: { $0.matchParentWidth() },

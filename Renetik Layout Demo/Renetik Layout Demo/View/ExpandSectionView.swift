@@ -6,7 +6,7 @@ class ExpandSectionView: CSView {
     }
     var expanded = true
     let headerButton = ExpandButton.construct("Configuration")
-    let lineView = DemoHorizontalLineStrong.constructMedium()
+    let lineView = HorizontalLineStrong.constructMedium()
     let itemsFrame = CSView.construct()
     let buttons = ButtonsView.construct()
 
