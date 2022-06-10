@@ -103,7 +103,7 @@ class ButtonsView: CSView {
 </p>
 
 ## Demo
-To run the example project, clone the repo and open Demo project.
+To run the example project, clone the repo and open Demo project. It is demonstration of some of best approaches I use in iOS development, but more will come in other libraries.
 
 ## Requirements
 Open and clear mind.
