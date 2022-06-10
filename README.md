@@ -54,6 +54,9 @@ class HeaderSectionView: CSView {
     <img src="https://github.com/renetik/renetik-ios-layout/blob/427bdc55b71bc629fe93da856fba5e05d533dcae/Images/Code1.png?raw=true" height="500">
 </p>
 
+# Create fully dynamic layouts with simple practices based on fundamental patterns and modern readable clean syntax.
+Undelying codebase is easy to read and understand so you dont get lost and can focuse on how layout actually work instead of how library works. 
+
 ```swift
 class ButtonsView: CSView {
     override class func construct() -> Self {
