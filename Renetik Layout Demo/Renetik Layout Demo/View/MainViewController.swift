@@ -2,13 +2,11 @@ import RenetikLayout
 
 class MainViewController: UIViewController {
     lazy var content = { MainView.construct() }()
-
     override func loadView() { view = content }
-
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        content.testSwitch.onClick { [unowned self] in
-            show(message: "testSwitch \(content.testSwitch.switchView.isOn.asString)")
+        content.testSwitch.isChecked.listen { [unowned self] in
+            show(message: "testSwitch \($0.asString)")
         }
         content.titleSubtitle.onClick { [unowned self] in
             show(message: "titleSubtitle")
@@ -38,7 +36,6 @@ class MainViewController: UIViewController {
             show(message: "TConfiguration Type")
         }
     }
-
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }

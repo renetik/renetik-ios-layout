@@ -1,4 +1,3 @@
-import UIKit
 public protocol CSHasLayoutProtocol {
     var layoutFunctions: CSEvent<Void> { get }
     func updateLayout() -> Self

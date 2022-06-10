@@ -4,7 +4,6 @@ class ExpandSectionView: CSView {
     override class func construct() -> Self {
         super.construct().background(color: .demo_control)
     }
-
     var expanded = true
     let headerButton = ExpandButton.construct("Configuration")
     let lineView = DemoHorizontalLineStrong.constructMedium()
@@ -28,7 +27,6 @@ class ExpandSectionView: CSView {
         layout { [unowned self] in heightToFit() }
         updateExpanded()
     }
-
     override func onLayoutCreated() {
         super.onLayoutCreated()
         headerButton.onClick { [unowned self] in
@@ -37,12 +35,11 @@ class ExpandSectionView: CSView {
             itemsFrame.updateLayout(forced: true)
         }
     }
-
     private func updateExpanded() {
         lineView.shown(if: expanded)
         itemsFrame.shown(if: expanded)
         headerButton.imageView.image(expanded ?
-                .chevron_down: .chevron_right)
+                .expand_more: .chevron_right)
     }
 }
 

@@ -1,7 +1,6 @@
 import RenetikLayout
 
 extension UIViewController: CSHasDialogProtocol {
-    @discardableResult
     public func show(title: String?, message: String,
         positive: CSDialogAction?, negative: CSDialogAction?,
         cancel: CSDialogAction?) -> CSHasDialogVisible {

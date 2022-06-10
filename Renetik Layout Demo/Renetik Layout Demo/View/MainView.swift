@@ -8,8 +8,8 @@ class MainView: CSView {
     let titleSubtitle = ImageTitleSubtitleButton.construct()
     let testSwitch = SwitchButton.construct(
         icon: .chevron_right, title: "test")
-    let headerView = HeaderSectionView.construct()
     let expandView = ExpandSectionView.construct()
+    let headerView = HeaderSectionView.construct()
 
     override func onCreateLayout() {
         super.onCreateLayout()
@@ -19,17 +19,15 @@ class MainView: CSView {
                 $0.add(view: titleSubtitle,
                     onCreate: { $0.matchParentWidth() },
                     onLayout: { $0.fromPrevious(top: 0) })
-                $0.add(view: DemoHorizontalLineStrong.construct()).matchParentWidth().fromPrevious(top: 0)
-
+                $0.add(view: DemoHorizontalLineStrong.construct())
+                    .matchParentWidth().fromPrevious(top: 0)
                 $0.add(view: testSwitch,
                     onCreate: { $0.matchParentWidth() },
                     onLayout: { $0.fromPrevious(top: 0) })
-
-                $0.add(view: headerView,
-                    onCreate: { $0.matchParentWidth() },
-                    onLayout: { $0.fromPrevious(top: 15) })
-
                 $0.add(view: expandView,
+                       onCreate: { $0.matchParentWidth() },
+                       onLayout: { $0.fromPrevious(top: 15) })
+                $0.add(view: headerView,
                     onCreate: { $0.matchParentWidth() },
                     onLayout: { $0.fromPrevious(top: 15) })
             }, onLayout: { [unowned self] in
@@ -43,7 +41,6 @@ class MainView: CSView {
         later { [unowned self] in
             scrollView.content.updateLayout(forced: true)
         }
-        //debugLayoutByRandomBackgroundColor()
     }
 }
 

@@ -1,11 +1,10 @@
 import RenetikLayout
 
 class HeaderSectionView: CSView {
-
+    
     override class func construct() -> Self {
         super.construct().background(color: .demo_control)
     }
-
     let header = wrap(UILabel.construct("App")).styleHeader()
     let buttons = ButtonsView.construct()
 
@@ -16,11 +15,6 @@ class HeaderSectionView: CSView {
             .fromPrevious(top: 0).matchParentWidth()
         add(view: buttons).fromPrevious(top: 0).matchParentWidth()
         heightByLastSubview()
-        delegate.onOrientationChange { [unowned self] in updateLayout() }
-    }
-
-    override func onLayoutCreated() {
-        super.onLayoutCreated()
     }
 }
 

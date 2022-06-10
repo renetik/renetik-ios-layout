@@ -11,7 +11,7 @@ class IconTextButton: CSWrapper<UIView> {
 
     let contentView = CSView.construct(height: 60)
         .interaction(enabled: false)
-    let imageView = UIImageView.construct(.chevron_right)
+    let imageView = UIImageView.construct(.monetization_on)
         .tint(color: .demo_text_strong)
     let textView = UILabel.construct().font(.demo_button)
         .text(color: .demo_text_strong)
@@ -20,9 +20,9 @@ class IconTextButton: CSWrapper<UIView> {
         super.onCreateLayout()
         wrap(contentView)
         contentView.add(view: imageView,
-            onCreate: { $0.from(left: 0).width(24).matchParentHeight() })
+            onCreate: { $0.from(left: 10).width(24).matchParentHeight() })
         contentView.add(view: textView,
-            onCreate: { $0.fromPrevious(left: 10).matchParentHeight() },
+            onCreate: { $0.fromPrevious(left: 24).matchParentHeight() },
             onLayout: { $0.fill(right: 0) })
     }
 }

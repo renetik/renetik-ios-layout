@@ -5,15 +5,14 @@ class ButtonsView: CSView {
     override class func construct() -> Self {
         super.construct().background(color: .demo_control)
     }
-
     let moveButton = IconTextButton.construct(
-        icon: .chevron_right, title: "Move")
+        icon: .open_with, title: "Move")
     let resizeButton = IconTextButton.construct(
-        icon: .chevron_right, title: "Resize")
+        icon: .fit_screen, title: "Resize")
     let scalesButton = IconTextButton.construct(
-        icon: .chevron_right, title: "Scales")
+        icon: .aspect_ratio, title: "Scales")
     let typeButton = IconTextButton.construct(
-        icon: .chevron_right, title: "Type")
+        icon: .dashboard, title: "Type")
 
     override func onCreateLayout() {
         super.onCreateLayout()
@@ -46,7 +45,6 @@ class ButtonsView: CSView {
                     onLayout: { $0.fromPrevious(left: 0).fill(right: 0) })
             })
         heightByLastSubview()
-        delegate.onOrientationChange { [unowned self] in updateLayout() }
     }
 
     override func onLayoutCreated() {

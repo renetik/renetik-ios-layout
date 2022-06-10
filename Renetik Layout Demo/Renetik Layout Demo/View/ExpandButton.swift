@@ -3,38 +3,36 @@ import RenetikLayout
 class ExpandButton: CSWrapper<UIView> {
 
     class func construct(_ text: String) -> Self {
-        construct().padding(left: 15).padding(right: 5).padding(vertical: 5).also {
-            $0.titleView.text(text)
-        }.background(.demo_control).addTouchEffect()
+        construct().padding(left: 15).padding(right: 5).padding(vertical: 5)
+            .also { $0.titleView.text(text) }
+            .background(.demo_control).addTouchEffect()
     }
-
-    let contentView = CSView.construct(height: 50).interaction(enabled: false)
-    let titleView = UILabel.construct().font(.demo_button).text(color: .demo_text_strong)
-    let imageView = UIImageView.construct(.chevron_right).tint(color: .demo_text_strong).size(30)
+    let contentView = CSView.construct(height: 50)
+    let titleView = UILabel.construct().font(.demo_button)
+        .text(color: .demo_text_strong)
+    let imageView = UIImageView.construct(.chevron_right)
+        .tint(color: .demo_text_strong).size(30)
 
     override func onCreateLayout() {
         super.onCreateLayout()
         contentView.add(view: titleView, onCreate: {
             $0.from(left: 0).matchParentHeight()
-        }, onLayout: { [unowned self]  view in
-            view.fill(right: 0, from: imageView)
-        })
+        }, onLayout: { [unowned self] view in
+                view.fill(right: 0, from: imageView)
+            })
         contentView.add(view: imageView, onCreate: {
             $0.centeredVertical()
-        }, onLayout: { [unowned self] in
-            $0.from(right: rightInset)
-        })
+        }, onLayout: { $0.from(right: 15) })
         wrap(contentView)
-        delegate.onOrientationChange { [unowned self] in contentView.updateLayout() }
     }
 }
 
 #if DEBUG
-import SwiftUI
-class ExpandButtonPreview: PreviewProvider, CSPreviewProvider {
-    class func preview(in view: UIView) {
-        view.add(view: ExpandButton.construct(.dummy_two_word))
-            .matchParentWidth().heightToFit()
+    import SwiftUI
+    class ExpandButtonPreview: PreviewProvider, CSPreviewProvider {
+        class func preview(in view: UIView) {
+            view.add(view: ExpandButton.construct(.dummy_two_word))
+                .matchParentWidth().heightToFit()
+        }
     }
-}
 #endif

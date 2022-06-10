@@ -1,9 +1,3 @@
-//
-//  Created by Rene on 11/26/18.
-//
-
-import UIKit
-
 public extension UIView {
 
     @discardableResult
