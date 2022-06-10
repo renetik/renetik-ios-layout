@@ -114,9 +114,7 @@ You can install using swift package manager for now using latest released versio
 ## Author
 Renetik, [Website](https://renetik.github.io)
 
-## Check out live time product [Renetik Instruments](https://renetik.com)
-
-## Or Hire me !
+## Hire me ! Or check out my product [Renetik Instruments](https://renetik.com)
 
 ## License
 Renetik Layout is available under the MIT license. See the LICENSE file for more info.
