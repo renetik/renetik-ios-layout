@@ -17,6 +17,8 @@ not new ways of doing things that distract you from making great products.
     <img src="https://github.com/renetik/renetik-ios-layout/blob/4ab8be927dd354bbea8dc3a6af8fc6be53c5770b/Images/Simulator1.png?raw=true" width="500">
 </p>
 
+Readability and simplicity of approach are the solutions for maintainable code base. Using SwiftUI preview opened new previously unimaginable possibilities, where even advanced editor of Android Studio strugles. Write beatiful code while be in control of what is really happening with full access to make any fix necessary easily.
+
 ```swift
 import RenetikLayout
 
