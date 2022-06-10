@@ -13,7 +13,7 @@ not new ways of doing things that distract you from making great products.
 ## Example
 
 <p align="left">
-    <img src="https://github.com/renetik/renetik-ios-layout/blob/4ab8be927dd354bbea8dc3a6af8fc6be53c5770b/Images/Simulator2.png?raw=true" width="500">
+    <img src="https://github.com/renetik/renetik-ios-layout/blob/4ab8be927dd354bbea8dc3a6af8fc6be53c5770b/Images/Simulator2.png?raw=true" height="500">
     <img src="https://github.com/renetik/renetik-ios-layout/blob/4ab8be927dd354bbea8dc3a6af8fc6be53c5770b/Images/Simulator1.png?raw=true" width="500">
 </p>
 
