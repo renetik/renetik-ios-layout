@@ -55,7 +55,7 @@ class HeaderSectionView: CSView {
 </p>
 
 # Create fully dynamic layouts with simple practices based on fundamental patterns and modern readable clean syntax.
-Undelying codebase is easy to read and understand so you dont get lost and can focuse on how layout actually work instead of how library works. 
+Undelying codebase is easy to read and understand so you dont get lost and can focuse on how layout actually work instead of how library works.
 
 ```swift
 class ButtonsView: CSView {
