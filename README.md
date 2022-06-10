@@ -33,7 +33,7 @@ class HeaderSectionView: CSView {
     override func onCreateLayout() {
         super.onCreateLayout()
         add(view: header).matchParentWidth().from(top: 0)
-        add(view: DemoHorizontalLineStrong.constructMedium())
+        add(view: HorizontalLineStrong.constructMedium())
             .fromPrevious(top: 0).matchParentWidth()
         add(view: buttons).fromPrevious(top: 0).matchParentWidth()
         heightByLastSubview()
