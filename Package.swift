@@ -15,12 +15,14 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/renetik/renetik-ios-core", "0.9.2" ..< "0.9.2" ),
+        .package(url: "https://github.com/renetik/renetik-ios-event", branch: "master" ),
     ],
     targets: [
         .target(
             name: "RenetikLayout",
             dependencies: [
                 .product(name: "RenetikCore", package: "renetik-ios-core"),
+                .product(name: "RenetikEvent", package: "renetik-ios-event"),
             ]
         ),
     ],
