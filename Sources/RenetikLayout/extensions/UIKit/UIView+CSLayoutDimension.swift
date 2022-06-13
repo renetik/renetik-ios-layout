@@ -1,8 +1,4 @@
-//
-// Created by Rene Dohan on 1/29/20.
-//
-
-import UIKit
+import RenetikUI
 
 extension UIView {
     // heightToFitSubviews cannot be used because this needs to shift subviews too
@@ -41,7 +37,7 @@ public extension UIView {
     @discardableResult
     func defaultSize() -> Self { width(UIScreen.width, height: UIScreen.height) }
 
-    var availableHeight: CGFloat { height - (Renetik.navigation?.navigationBar.bottom ?? 0) }
+    var availableHeight: CGFloat { height - (navigation?.navigationBar.bottom ?? 0) }
 
     @discardableResult
     func heightByLastSubview(padding: CGFloat = 0, minimum: CGFloat = 0) -> Self {

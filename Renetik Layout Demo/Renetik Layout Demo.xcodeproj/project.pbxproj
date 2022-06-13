@@ -71,6 +71,7 @@
 		0429AAFE284FE95400FBFE96 /* ImageTitleSubtitleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTitleSubtitleButton.swift; sourceTree = "<group>"; };
 		0429AB00284FEDF600FBFE96 /* LineViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineViews.swift; sourceTree = "<group>"; };
 		04645D562850F1A600FD39CC /* renetik-ios-layout */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "renetik-ios-layout"; path = ..; sourceTree = "<group>"; };
+		04652E9928555B5400E0627B /* Renetik Layout Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Renetik Layout Demo.entitlements"; sourceTree = "<group>"; };
 		04941BB9285138760002DF29 /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		04D746FB284E7E1D00EC8337 /* Renetik Layout Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Renetik Layout Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D746FE284E7E1D00EC8337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +176,7 @@
 		04D746FD284E7E1D00EC8337 /* Renetik Layout Demo */ = {
 			isa = PBXGroup;
 			children = (
+				04652E9928555B5400E0627B /* Renetik Layout Demo.entitlements */,
 				041A018F284FD854007372AB /* View */,
 				041A014C284FC711007372AB /* Resources */,
 				04E3CF10284ED79000B91C98 /* LaunchScreen.xib */,
@@ -521,6 +523,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Renetik Layout Demo/Renetik Layout Demo.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4QNB24D8D8;
@@ -539,6 +542,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "renetik.ios.layout.demo.Renetik-Layout-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -550,6 +555,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Renetik Layout Demo/Renetik Layout Demo.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4QNB24D8D8;
@@ -568,6 +574,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "renetik.ios.layout.demo.Renetik-Layout-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
