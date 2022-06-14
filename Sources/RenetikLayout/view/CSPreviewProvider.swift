@@ -51,7 +51,7 @@ final class CSViewRepresentable: CSObject, UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UIView, context: Context) {
-        uiView.updateLayout()
+        uiView.onLayout()
     }
     
     func makeUIView(context: Context) -> UIView {

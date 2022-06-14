@@ -10,8 +10,8 @@ class ExpandSectionView: CSView {
     let itemsFrame = CSView.construct()
     let buttons = ButtonsView.construct()
 
-    override func onCreateLayout() {
-        super.onCreateLayout()
+    override func onCreate() {
+        super.onCreate()
         add(view: headerButton).from(top: 0).matchParentWidth()
         add(view: lineView).fromPrevious(top: 0).matchParentWidth()
         add(view: itemsFrame,
@@ -27,8 +27,8 @@ class ExpandSectionView: CSView {
         layout { [unowned self] in heightToFit() }
         updateExpanded()
     }
-    override func onLayoutCreated() {
-        super.onLayoutCreated()
+    override func onCreated() {
+        super.onCreated()
         headerButton.onClick { [unowned self] in
             expanded = !expanded
             updateExpanded()

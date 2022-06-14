@@ -15,8 +15,8 @@ class IconTextButton: CSWrapper<UIView> {
     let textView = UILabel.construct().font(.demo_button)
         .text(color: .demo_text_strong)
 
-    override func onCreateLayout() {
-        super.onCreateLayout()
+    override func onCreate() {
+        super.onCreate()
         wrap(contentView)
         contentView.add(view: imageView,
             onCreate: { $0.from(left: 10).width(24).matchParentHeight() })

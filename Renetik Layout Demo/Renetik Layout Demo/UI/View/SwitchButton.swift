@@ -14,8 +14,8 @@ class SwitchButton: CSWrapper<UIView> {
     let titleView = UILabel.construct().font(.demo_button).text(color: .demo_text_strong)
     let switchView = UISwitch.construct()
 
-    override func onCreateLayout() {
-        super.onCreateLayout()
+    override func onCreate() {
+        super.onCreate()
         padding(left: 15, right: 5).padding(vertical: 5)
             .wrap(contentView.height(50))
 
@@ -32,8 +32,8 @@ class SwitchButton: CSWrapper<UIView> {
         })
     }
 
-    override func onLayoutCreated() {
-        super.onLayoutCreated()
+    override func onCreated() {
+        super.onCreated()
         onClick { [unowned self] in
             switchView.setOn(!switchView.isOn, animated: true)
             isChecked.fire(switchView.isOn)

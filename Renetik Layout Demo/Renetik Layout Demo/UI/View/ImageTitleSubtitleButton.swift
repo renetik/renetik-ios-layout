@@ -15,8 +15,8 @@ class ImageTitleSubtitleButton: CSWrapper<UIView> {
             .text(color: .demo_text_subtle)
         , paddingLeft: 5, paddingRight: 5, paddingTop: 3, paddingBottom: 5)
 
-    override func onCreateLayout() {
-        super.onCreateLayout()
+    override func onCreate() {
+        super.onCreate()
         wrap(contentView)
         contentView.add(view: presetButtonLooperTrackTitle)
             .matchParentWidth().from(top: 0).padding(vertical: 3)
@@ -53,8 +53,8 @@ class ImageTitleSubtitleButton: CSWrapper<UIView> {
         heightToFit()
     }
 
-    override func onLayoutCreated() {
-        super.onLayoutCreated()
+    override func onCreated() {
+        super.onCreated()
         addTouchEffect().onClick {
             logInfo("click")
         }

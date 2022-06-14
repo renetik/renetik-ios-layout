@@ -107,7 +107,7 @@ open class CSWrapper<Wrapped: UIView>: CSView {
 
     @discardableResult
     public func updateWrapped(_ closure: (Wrapped) -> Void) -> Self {
-        updateLayout()
+        onLayout()
         closure(wrapped)
         updateWrap()
         return self

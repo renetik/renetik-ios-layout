@@ -21,41 +21,41 @@ extension UIView: CSHasLayoutProtocol {
             isDidLayoutSubviews = true
             onLayoutSubviewsFirstTime()
             if (!isLayoutCreated) {
-                onCreateLayout()
-                onLayoutCreated()
+                onCreate()
+                onCreated()
             }
             eventLayoutSubviewsFirstTime.fire()
         }
         else {
-            onUpdateLayout()
+            onUpdate()
         }
-        updateLayout()
+        onLayout()
     }
 
     @objc open func onLayoutSubviewsFirstTime() {
     }
 
-    @objc open func onCreateLayout() {
+    @objc open func onCreate() {
         isLayoutCreated = true
     }
 
-    @objc open func onLayoutCreated() { }
+    @objc open func onCreated() { }
 
-    @objc open func onUpdateLayout() { }
+    @objc open func onUpdate() { }
 
     @discardableResult
-    @objc open func updateLayout() -> Self { layoutFunctions.fire(); return self }
+    @objc open func onLayout() -> Self { layoutFunctions.fire(); return self }
 
     @discardableResult
     public func updateLayout(forced: Bool = false) -> Self {
-        forced ? updateLayoutForced() : updateLayout()
+        forced ? updateLayoutForced() : onLayout()
     }
 
     @discardableResult
     public func updateLayoutForced() -> Self {
         var view: UIView? = self
         while view.notNil {
-            view!.updateLayout()
+            view!.onLayout()
             view = view!.superview
         }
         return self

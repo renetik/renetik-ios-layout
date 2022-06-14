@@ -11,8 +11,8 @@ class MainView: CSView {
     let expandView = ExpandSectionView.construct()
     let headerView = HeaderSectionView.construct()
 
-    override func onCreateLayout() {
-        super.onCreateLayout()
+    override func onCreate() {
+        super.onCreate()
         add(view: scrollView).matchParent().add(
             view: CSView.construct(), onCreate: { [unowned self] in
                 $0.matchParentWidth()

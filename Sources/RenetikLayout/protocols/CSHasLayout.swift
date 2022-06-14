@@ -3,11 +3,11 @@ import RenetikEvent
 
 public protocol CSHasLayoutProtocol {
     var layoutFunctions: CSEvent<Void> { get }
-    func updateLayout() -> Self
+    func onLayout() -> Self
     func onLayoutSubviewsFirstTime()
-    func onCreateLayout()
-    func onLayoutCreated()
-    func onUpdateLayout()
+    func onCreate()
+    func onCreated()
+    func onUpdate()
 }
 
 public protocol CSLayoutItemProtocol {

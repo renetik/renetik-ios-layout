@@ -7,8 +7,8 @@ class HeaderSectionView: CSView {
     let header = wrap(UILabel.construct("App")).styleHeader()
     let buttons = ButtonsView.construct()
 
-    override func onCreateLayout() {
-        super.onCreateLayout()
+    override func onCreate() {
+        super.onCreate()
         add(view: header).matchParentWidth().from(top: 0)
         add(view: HorizontalLineStrong.constructMedium())
             .fromPrevious(top: 0).matchParentWidth()

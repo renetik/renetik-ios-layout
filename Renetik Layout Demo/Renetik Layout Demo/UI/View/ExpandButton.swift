@@ -12,8 +12,8 @@ class ExpandButton: CSWrapper<UIView> {
     let imageView = UIImageView.construct(.chevron_right)
         .tint(color: .demo_text_strong).size(30)
 
-    override func onCreateLayout() {
-        super.onCreateLayout()
+    override func onCreate() {
+        super.onCreate()
         contentView.add(view: titleView, onCreate: {
             $0.from(left: 0).matchParentHeight()
         }, onLayout: { [unowned self] view in

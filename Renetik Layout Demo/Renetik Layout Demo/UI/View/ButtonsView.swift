@@ -9,8 +9,8 @@ class ButtonsView: CSView {
     let scalesButton = IconTextButton.construct(icon: .aspect_ratio, title: "Scales")
     let typeButton = IconTextButton.construct(icon: .dashboard, title: "Type")
 
-    override func onCreateLayout() {
-        super.onCreateLayout()
+    override func onCreate() {
+        super.onCreate()
         add(view: CSView.construct(),
             onCreate: { [unowned self] horizontalView in
                 horizontalView.fromPrevious(top: 0).matchParentWidth().height(60)
