@@ -12,17 +12,17 @@ class ButtonsView: CSView {
     override func onCreate() {
         super.onCreate()
         add(view: CSView.construct(),
-            onCreate: { [unowned self] horizontalView in
-                horizontalView.fromPrevious(top: 0).matchParentWidth().height(60)
-                horizontalView.add(view: moveButton,
+            onCreate: { [unowned self] in
+                $0.fromPrevious(top: 0).matchParentWidth().height(60)
+                $0.add(view: moveButton,
                     onCreate: { $0.from(left: 0).matchParentHeight() },
-                    onLayout: { $0.width(horizontalView.width / 2) })
-                horizontalView.add(view: VerticalLine.constructMedium(),
+                    onLayout: { $0.width($0.superview!.width / 2) })
+                $0.add(view: VerticalLine.constructMedium(),
                     onCreate: { $0.matchParentHeight() },
                     onLayout: { $0.fromPrevious(left: 0) })
-                horizontalView.add(view: resizeButton,
+                $0.add(view: resizeButton,
                     onCreate: { $0.matchParentHeight() },
-                    onLayout: { $0.fromPrevious(left: 0).width(horizontalView.width / 2) })
+                    onLayout: { $0.fromPrevious(left: 0).width($0.superview!.width / 2) })
             })
         add(view: HorizontalLineStrong.constructMedium())
             .fromPrevious(top: 0).matchParentWidth()
