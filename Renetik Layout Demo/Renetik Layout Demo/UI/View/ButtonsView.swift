@@ -27,15 +27,15 @@ class ButtonsView: CSView {
         add(view: HorizontalLineStrong.constructMedium())
             .fromPrevious(top: 0).matchParentWidth()
         add(view: CSView.construct(),
-            onCreate: { [unowned self] horizontalView in
-                horizontalView.fromPrevious(top: 0).matchParentWidth().height(60)
-                horizontalView.add(view: scalesButton,
+            onCreate: { [unowned self] in
+                $0.fromPrevious(top: 0).matchParentWidth().height(60)
+                $0.add(view: scalesButton,
                     onCreate: { $0.from(left: 0).matchParentHeight() },
-                    onLayout: { $0.width(horizontalView.width / 2) })
-                horizontalView.add(view: VerticalLine.constructMedium(),
+                    onLayout: { $0.width($0.superview!.width / 2) })
+                $0.add(view: VerticalLine.constructMedium(),
                     onCreate: { $0.matchParentHeight() },
                     onLayout: { $0.fromPrevious(left: 0) })
-                horizontalView.add(view: typeButton,
+                $0.add(view: typeButton,
                     onCreate: { $0.matchParentHeight() },
                     onLayout: { $0.fromPrevious(left: 0).fill(right: 0) })
             })
@@ -47,7 +47,7 @@ class ButtonsView: CSView {
     import SwiftUI
     class ButtonsViewPreview: PreviewProvider, CSPreviewProvider {
         class func preview(in window: UIView) {
-            window.add(window: ButtonsView.construct())
+            window.add(view: ButtonsView.construct())
                 .matchParentWidth().heightToFit()
         }
     }

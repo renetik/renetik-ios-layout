@@ -31,7 +31,7 @@ class ExpandButton: CSWrapper<UIView> {
     import SwiftUI
     class ExpandButtonPreview: PreviewProvider, CSPreviewProvider {
         class func preview(in window: UIView) {
-            window.add(window: ExpandButton.construct(.dummy_two_word))
+            window.add(view: ExpandButton.construct(.dummy_two_word))
                 .matchParentWidth().heightToFit()
         }
     }

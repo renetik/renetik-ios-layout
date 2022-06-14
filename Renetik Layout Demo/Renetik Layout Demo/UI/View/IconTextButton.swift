@@ -31,7 +31,7 @@ class IconTextButton: CSWrapper<UIView> {
 import SwiftUI
 class IconTextButtonPreview: PreviewProvider, CSPreviewProvider {
     class func preview(in window: UIView) {
-        window.add(window: IconTextButton.construct(
+        window.add(view: IconTextButton.construct(
             icon: .chevron_right, title: .dummy_short))
         .matchParentWidth().heightToFit().background(.demo_control)
     }

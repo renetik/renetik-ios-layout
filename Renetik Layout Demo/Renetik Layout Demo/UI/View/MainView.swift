@@ -25,8 +25,8 @@ class MainView: CSView {
                     onCreate: { $0.matchParentWidth() },
                     onLayout: { $0.fromPrevious(top: 0) })
                 $0.add(view: expandView,
-                       onCreate: { $0.matchParentWidth() },
-                       onLayout: { $0.fromPrevious(top: 15) })
+                    onCreate: { $0.matchParentWidth() },
+                    onLayout: { $0.fromPrevious(top: 15) })
                 $0.add(view: headerView,
                     onCreate: { $0.matchParentWidth() },
                     onLayout: { $0.fromPrevious(top: 15) })
@@ -35,12 +35,6 @@ class MainView: CSView {
                     .heightToFit().from(top: topInset)
                 scrollView.updateContentSize()
             })
-        delegate.onOrientationChange { [unowned self] in
-            scrollView.content.updateLayout(forced: true)
-        }
-        later { [unowned self] in
-            scrollView.content.updateLayout(forced: true)
-        }
     }
 }
 
@@ -50,9 +44,8 @@ class MainView: CSView {
     class MainViewPreview: PreviewProvider, CSPreviewProvider {
         static var dimension: CSPreviewDimension = .iPhone8
         static var isPortrait = true
-
         class func preview(in window: UIView) {
-            window.add(window: MainView.construct()).matchParent()
+            window.add(view: MainView.construct()).matchParent()
         }
     }
 #endif

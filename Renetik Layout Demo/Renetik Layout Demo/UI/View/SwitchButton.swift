@@ -24,8 +24,8 @@ class SwitchButton: CSWrapper<UIView> {
 
         contentView.add(view: titleView, onCreate: {
             $0.fromPrevious(left: 24).matchParentHeight()
-        }, onLayout: { [unowned self] view in
-                view.fill(right: 0, from: switchView)
+        }, onLayout: { [unowned self] in
+                $0.fill(right: 0, from: switchView)
             })
         contentView.add(view: switchView, onLayout: {
             $0.from(right: 15).centeredVertical()
@@ -47,7 +47,7 @@ class SwitchButton: CSWrapper<UIView> {
     class SwitchButtonPreview: PreviewProvider, CSPreviewProvider {
         static var isPortrait = true
         class func preview(in window: UIView) {
-            window.add(window: SwitchButton.construct(
+            window.add(view: SwitchButton.construct(
                 icon: .chevron_right, title: "Test"))
                 .matchParentWidth().background(.demo_control)
         }

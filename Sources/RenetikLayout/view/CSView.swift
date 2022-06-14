@@ -35,7 +35,7 @@ open class CSView: UIControl, CSEventOwnerHasDestroy {
     }
 
     @objc open override func onLayoutSubviewsFirstTime() {
-        register(window?.orientationChange.listen { [unowned self] in updateLayout() })
+        register(window?.orientationChange.listen { [unowned self] in updateLayout(forced: true) })
     }
 
     public var eventDestroy = event()
