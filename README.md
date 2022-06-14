@@ -113,8 +113,7 @@ Open and clear mind.
 You can install using swift package manager for now using latest released version.
 
 ## Usage
-Look at docs or implementation to pass arguments.
-Then look at usage in demo application or [Documentation](https://renetik.github.io/renetik-ios-layout/) that will be hopefully documented better soon :), 
+Look at usage in demo application or [Documentation](https://renetik.github.io/renetik-ios-layout/) that will be hopefully documented better soon, 
 but don't hesitate to look at actual implementation, because it's always as simple as possible, names are always descriptive,
 and syntax is always readable, because I do just that, I remeber a little and have to understand it quickly from codebase again.
 
