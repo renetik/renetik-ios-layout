@@ -23,15 +23,14 @@ Readability and simplicity of approach are the solutions for maintainable code b
 import RenetikLayout
 
 class HeaderSectionView: CSView {
-    
     override class func construct() -> Self {
         super.construct().background(color: .demo_control)
     }
     let header = wrap(UILabel.construct("App")).styleHeader()
     let buttons = ButtonsView.construct()
 
-    override func onCreateLayout() {
-        super.onCreateLayout()
+    override func onCreate() {
+        super.onCreate()
         add(view: header).matchParentWidth().from(top: 0)
         add(view: HorizontalLineStrong.constructMedium())
             .fromPrevious(top: 0).matchParentWidth()
@@ -39,12 +38,11 @@ class HeaderSectionView: CSView {
         heightByLastSubview()
     }
 }
-
 #if DEBUG
     import SwiftUI
     class AppPreview: PreviewProvider, CSPreviewProvider {
-        class func preview(in view: UIView) {
-            view.add(view: HeaderSectionView.construct())
+        class func preview(in window: UIView) {
+            window.add(view: HeaderSectionView.construct())
                 .matchParentWidth().heightToFit()
         }
     }
