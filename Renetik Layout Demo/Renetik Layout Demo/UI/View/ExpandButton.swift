@@ -16,12 +16,12 @@ class ExpandButton: CSWrapper<UIView> {
         super.onCreate()
         contentView.add(view: titleView, onCreate: {
             $0.from(left: 0).matchParentHeight()
-        }, onLayout: { [unowned self] view in
-                view.fill(right: 0, from: imageView)
-            })
+        }, onLayout: { [unowned self] in $0.fill(right: 0, from: imageView) })
+        
         contentView.add(view: imageView, onCreate: {
             $0.centeredVertical()
         }, onLayout: { $0.from(right: 15) })
+        
         wrap(contentView)
     }
 }

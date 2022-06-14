@@ -44,8 +44,8 @@ class ImageTitleSubtitleButton: CSWrapper<UIView> {
                     }
                 )
             },
-            onLayout: { [unowned self] horizontalView in
-                horizontalView.heightToFit()
+            onLayout: { [unowned self] in
+                $0.heightToFit()
                 imageView.fill(bottom: 0, flexible: false)
             }
         )

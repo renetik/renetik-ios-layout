@@ -14,16 +14,12 @@ class ExpandSectionView: CSView {
         super.onCreate()
         add(view: headerButton).from(top: 0).matchParentWidth()
         add(view: lineView).fromPrevious(top: 0).matchParentWidth()
-        add(view: itemsFrame,
-            onCreate: { [unowned self] in
-                $0.matchParentWidth()
-                $0.add(view: buttons,
-                    onCreate: { $0.matchParentWidth() },
-                    onLayout: { $0.heightToFit() })
-            },
-            onLayout: {
-                $0.fromPrevious(top: 0).heightToFit()
-            })
+        add(view: itemsFrame, onCreate: { [unowned self] in
+            $0.matchParentWidth()
+            $0.add(view: buttons,
+                onCreate: { $0.matchParentWidth() },
+                onLayout: { $0.heightToFit() })
+        }, onLayout: { $0.fromPrevious(top: 0).heightToFit() })
         layout { [unowned self] in heightToFit() }
         updateExpanded()
     }
