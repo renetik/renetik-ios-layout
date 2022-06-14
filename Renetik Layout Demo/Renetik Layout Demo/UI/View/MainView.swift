@@ -37,10 +37,8 @@ class MainView: CSView {
             })
     }
 }
-
 #if DEBUG
     import SwiftUI
-
     class MainViewPreview: PreviewProvider, CSPreviewProvider {
         static var dimension: CSPreviewDimension = .iPhone8
         static var isPortrait = true

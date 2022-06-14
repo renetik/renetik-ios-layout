@@ -63,7 +63,6 @@ class ImageTitleSubtitleButton: CSWrapper<UIView> {
 
 #if DEBUG
     import SwiftUI
-
     class ImageTitleSubtitleButtonPreview: PreviewProvider, CSPreviewProvider {
         class func preview(in window: UIView) {
             window.add(view: ImageTitleSubtitleButton.construct())

@@ -43,7 +43,6 @@ class SwitchButton: CSWrapper<UIView> {
 
 #if DEBUG
     import SwiftUI
-
     class SwitchButtonPreview: PreviewProvider, CSPreviewProvider {
         static var isPortrait = true
         class func preview(in window: UIView) {

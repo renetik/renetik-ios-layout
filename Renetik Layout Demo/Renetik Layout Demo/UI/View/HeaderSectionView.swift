@@ -1,7 +1,6 @@
 import RenetikLayout
 
 class HeaderSectionView: CSView {
-    
     override class func construct() -> Self {
         super.construct().background(color: .demo_control)
     }
@@ -17,7 +16,6 @@ class HeaderSectionView: CSView {
         heightByLastSubview()
     }
 }
-
 #if DEBUG
     import SwiftUI
     class AppPreview: PreviewProvider, CSPreviewProvider {

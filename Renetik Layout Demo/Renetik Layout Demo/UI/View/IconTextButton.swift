@@ -1,7 +1,6 @@
 import RenetikLayout
 
 class IconTextButton: CSWrapper<UIView> {
-
     class func construct(icon: UIImage, title: String) -> Self {
         construct().padding(left: 10).padding(right: 5).padding(vertical: 5).also {
             $0.imageView.image(icon)
@@ -26,14 +25,13 @@ class IconTextButton: CSWrapper<UIView> {
             onLayout: { $0.fill(right: 0) })
     }
 }
-
 #if DEBUG
-import SwiftUI
-class IconTextButtonPreview: PreviewProvider, CSPreviewProvider {
-    class func preview(in window: UIView) {
-        window.add(view: IconTextButton.construct(
-            icon: .chevron_right, title: .dummy_short))
-        .matchParentWidth().heightToFit().background(.demo_control)
+    import SwiftUI
+    class IconTextButtonPreview: PreviewProvider, CSPreviewProvider {
+        class func preview(in window: UIView) {
+            window.add(view: IconTextButton.construct(
+                icon: .chevron_right, title: .dummy_short))
+                .matchParentWidth().heightToFit().background(.demo_control)
+        }
     }
-}
 #endif

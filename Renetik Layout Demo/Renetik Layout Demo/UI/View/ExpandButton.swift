@@ -1,7 +1,6 @@
 import RenetikLayout
 
 class ExpandButton: CSWrapper<UIView> {
-
     class func construct(_ text: String) -> Self {
         construct().padding(left: 15).padding(right: 5).padding(vertical: 5)
             .also { $0.titleView.text(text) }
@@ -26,7 +25,6 @@ class ExpandButton: CSWrapper<UIView> {
         wrap(contentView)
     }
 }
-
 #if DEBUG
     import SwiftUI
     class ExpandButtonPreview: PreviewProvider, CSPreviewProvider {

@@ -27,7 +27,7 @@
 		0429AB01284FEDF600FBFE96 /* LineViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0429AB00284FEDF600FBFE96 /* LineViews.swift */; };
 		04645D582850F1C300FD39CC /* RenetikLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 04645D572850F1C300FD39CC /* RenetikLayout */; };
 		04941BBA285138760002DF29 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04941BB9285138760002DF29 /* UIView+.swift */; };
-		04D746FF284E7E1D00EC8337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D746FE284E7E1D00EC8337 /* AppDelegate.swift */; };
+		04D746FF284E7E1D00EC8337 /* LayoutDemoAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D746FE284E7E1D00EC8337 /* LayoutDemoAppDelegate.swift */; };
 		04D74703284E7E1D00EC8337 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D74702284E7E1D00EC8337 /* MainView.swift */; };
 		04D74708284E7E1D00EC8337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04D74707284E7E1D00EC8337 /* Assets.xcassets */; };
 		04D74716284E7E1E00EC8337 /* Renetik_Layout_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D74715284E7E1E00EC8337 /* Renetik_Layout_DemoTests.swift */; };
@@ -76,7 +76,7 @@
 		04652E9928555B5400E0627B /* Renetik Layout Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Renetik Layout Demo.entitlements"; sourceTree = "<group>"; };
 		04941BB9285138760002DF29 /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		04D746FB284E7E1D00EC8337 /* Renetik Layout Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Renetik Layout Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		04D746FE284E7E1D00EC8337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		04D746FE284E7E1D00EC8337 /* LayoutDemoAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutDemoAppDelegate.swift; sourceTree = "<group>"; };
 		04D74702284E7E1D00EC8337 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		04D74707284E7E1D00EC8337 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04D7470C284E7E1D00EC8337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -199,7 +199,7 @@
 				041A018F284FD854007372AB /* UI */,
 				041A014C284FC711007372AB /* Resources */,
 				04652E9928555B5400E0627B /* Renetik Layout Demo.entitlements */,
-				04D746FE284E7E1D00EC8337 /* AppDelegate.swift */,
+				04D746FE284E7E1D00EC8337 /* LayoutDemoAppDelegate.swift */,
 				04D74707284E7E1D00EC8337 /* Assets.xcassets */,
 				04D7470C284E7E1D00EC8337 /* Info.plist */,
 				04093A382853046E000ECC34 /* Localizable.strings */,
@@ -383,7 +383,7 @@
 				042396CE28527A70009E8832 /* HeaderSectionView.swift in Sources */,
 				042396CF28527A70009E8832 /* IconTextButton.swift in Sources */,
 				0429AAFF284FE95400FBFE96 /* ImageTitleSubtitleButton.swift in Sources */,
-				04D746FF284E7E1D00EC8337 /* AppDelegate.swift in Sources */,
+				04D746FF284E7E1D00EC8337 /* LayoutDemoAppDelegate.swift in Sources */,
 				04093A352852DCC7000ECC34 /* UIViewController+.swift in Sources */,
 				041A0159284FC7A1007372AB /* Fonts.swift in Sources */,
 				041A0158284FC7A1007372AB /* Values.swift in Sources */,

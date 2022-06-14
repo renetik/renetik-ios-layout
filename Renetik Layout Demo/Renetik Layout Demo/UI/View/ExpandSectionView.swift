@@ -42,7 +42,6 @@ class ExpandSectionView: CSView {
                 .expand_more: .chevron_right)
     }
 }
-
 #if DEBUG
     import SwiftUI
     class ExpandSectionPreview: PreviewProvider, CSPreviewProvider {
