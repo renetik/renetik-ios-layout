@@ -90,6 +90,7 @@ open class CSWrapper<Wrapped: UIView>: CSView {
                     .from(top: paddingTop).fill(bottom: paddingBottom)
             })
 //        debugLayoutByRandomBackgroundColor()
+        updateWrap()
         return self
     }
 
@@ -98,10 +99,9 @@ open class CSWrapper<Wrapped: UIView>: CSView {
     @discardableResult
     public func updateWrap() -> Self {
         if subviews.isEmpty { return self }
+//        updateLayout() //TODO: test if this is anough
         width(paddingLeft + paddingRight + wrapped.width)
         height(paddingTop + paddingBottom + wrapped.height)
-        wrapped.from(left: paddingLeft).fill(right: paddingRight)
-            .from(top: paddingTop).fill(bottom: paddingBottom)
         return self
     }
 
@@ -110,6 +110,19 @@ open class CSWrapper<Wrapped: UIView>: CSView {
         updateLayout()
         closure(wrapped)
         updateWrap()
+        return self
+    }
+
+    @discardableResult
+    open override func heightToFit() -> Self {
+        wrapped.heightToFit()
+        super.heightToFit().add(height: paddingTop + paddingBottom)
+        return self
+    }
+
+    public override func widthToFit() -> Self {
+        wrapped.widthToFit()
+        super.widthToFit().add(width: paddingLeft + paddingRight)
         return self
     }
 }

@@ -46,8 +46,8 @@ class ButtonsView: CSView {
 #if DEBUG
     import SwiftUI
     class ButtonsViewPreview: PreviewProvider, CSPreviewProvider {
-        class func preview(in view: UIView) {
-            view.add(view: ButtonsView.construct())
+        class func preview(in window: UIView) {
+            window.add(window: ButtonsView.construct())
                 .matchParentWidth().heightToFit()
         }
     }

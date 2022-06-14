@@ -65,8 +65,8 @@ class ImageTitleSubtitleButton: CSWrapper<UIView> {
     import SwiftUI
 
     class ImageTitleSubtitleButtonPreview: PreviewProvider, CSPreviewProvider {
-        class func preview(in view: UIView) {
-            view.add(view: ImageTitleSubtitleButton.construct()).matchParentWidth().heightToFit()
+        class func preview(in window: UIView) {
+            window.add(window: ImageTitleSubtitleButton.construct()).matchParentWidth().heightToFit()
                 .background(.demo_control)
         }
     }

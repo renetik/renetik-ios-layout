@@ -2,7 +2,8 @@ public extension UIView {
 
     @discardableResult
     func add<View: UIView>(view: View, onCreate: ((View) -> ())? = nil) -> View {
-         addSubview(view)
+        addSubview(view)
+        view.layoutSubviews()
         onCreate?(view)
         return view
     }
@@ -11,6 +12,7 @@ public extension UIView {
     func add<View: UIView>(before view: View, onCreate: ((View) -> ())? = nil) -> View {
         let index = subviews.count - 1
         insertSubview(view, at: index)
+        view.layoutSubviews()
         onCreate?(view)
         return view
     }
@@ -56,7 +58,7 @@ public extension UIView {
     func findPrevious(of subview: UIView, skipHidden: Bool = true) -> UIView? {
         if subviews.index(of: subview).isNil { fatalError() }
         return skipHidden ? findVisibleSubviewBackwards(from: subviews.index(of: subview)! - 1)
-            : subviews.previous(of: subview)
+        : subviews.previous(of: subview)
     }
 
     var lastVisibleSubview: UIView? { findVisibleSubviewBackwards(from: subviews.lastIndex) }

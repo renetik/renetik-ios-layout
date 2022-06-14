@@ -46,8 +46,8 @@ class ExpandSectionView: CSView {
 #if DEBUG
     import SwiftUI
     class ExpandSectionPreview: PreviewProvider, CSPreviewProvider {
-        class func preview(in view: UIView) {
-            view.add(view: ExpandSectionView.construct())
+        class func preview(in window: UIView) {
+            window.add(window: ExpandSectionView.construct())
                 .matchParentWidth().heightToFit()
         }
     }

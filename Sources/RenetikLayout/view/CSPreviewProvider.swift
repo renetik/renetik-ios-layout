@@ -23,7 +23,7 @@ public protocol CSPreviewProvider {
 //    static var device: CSPreviewDevice? { get }
     static var dimension: CSPreviewDimension { get }
     static var isPortrait: Bool { get }
-    static func preview(in view: UIView)
+    static func preview(in window: UIView)
 }
 
 public extension PreviewProvider where Self: CSPreviewProvider {

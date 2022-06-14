@@ -46,8 +46,8 @@ class SwitchButton: CSWrapper<UIView> {
 
     class SwitchButtonPreview: PreviewProvider, CSPreviewProvider {
         static var isPortrait = true
-        class func preview(in view: UIView) {
-            view.add(view: SwitchButton.construct(
+        class func preview(in window: UIView) {
+            window.add(window: SwitchButton.construct(
                 icon: .chevron_right, title: "Test"))
                 .matchParentWidth().background(.demo_control)
         }

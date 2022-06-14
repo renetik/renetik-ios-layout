@@ -147,7 +147,7 @@ public extension UIView {
 
     @discardableResult
     func matchParentHeight(margin: CGFloat = 0) -> Self {
-        from(top: margin).fillTo(bottom: margin)
+        from(top: margin).flex(bottom: margin)
     }
 
     @discardableResult
@@ -161,8 +161,8 @@ public extension UIView {
     }
 
     @discardableResult
-    func fillTo(bottom: CGFloat, flexible: Bool = true) -> Self {
-        self.fill(bottom: bottom, flexible: flexible)
+    func flex(bottom: CGFloat, flexible: Bool = true) -> Self {
+        fill(bottom: bottom, flexible: flexible)
     }
 
     @discardableResult

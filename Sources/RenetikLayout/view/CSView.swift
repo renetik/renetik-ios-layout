@@ -1,4 +1,5 @@
-open class CSView: UIControl {
+import RenetikEvent
+open class CSView: UIControl, CSEventOwnerHasDestroy {
 
     @discardableResult
     open override class func construct() -> Self { construct(defaultSize: true) }
@@ -13,8 +14,6 @@ open class CSView: UIControl {
     @discardableResult
     override open func construct() -> Self {
         super.construct().defaultSize()
-        onCreateLayout()
-        onLayoutCreated()
         return self
     }
 
@@ -25,27 +24,25 @@ open class CSView: UIControl {
 
     @discardableResult
     open override func heightToFit() -> Self {
-//        if content.notNil {
-//            content!.heightToFit()
-//            let masks = saveAndClearSubviewsAutoresizingMasks()
-//            height(content!.height)
-//            restoreSubviewsAutoresizing(masks: masks)
-//        } else {
-            heightToFitSubviews()
-//        }
+        heightToFitSubviews()
         return self
     }
 
     @discardableResult
     open override func resizeToFit() -> Self {
-//        if content.notNil {
-//            content!.resizeToFit()
-//            let masks = saveAndClearSubviewsAutoresizingMasks()
-//            size(content!.size)
-//            restoreSubviewsAutoresizing(masks: masks)
-//        } else {
-            resizeToFitSubviews()
-//        }
+        resizeToFitSubviews()
         return self
+    }
+
+    @objc open override func onLayoutSubviewsFirstTime() {
+        register(window?.orientationChange.listen { [unowned self] in updateLayout() })
+    }
+
+    public var eventDestroy = event()
+    public let registrations = CSRegistrations()
+
+    deinit {
+        registrations.cancel()
+        eventDestroy.fire().clear()
     }
 }

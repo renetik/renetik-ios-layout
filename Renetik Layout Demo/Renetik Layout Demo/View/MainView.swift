@@ -51,8 +51,8 @@ class MainView: CSView {
         static var dimension: CSPreviewDimension = .iPhone8
         static var isPortrait = true
 
-        class func preview(in view: UIView) {
-            view.add(view: MainView.construct()).matchParent()
+        class func preview(in window: UIView) {
+            window.add(window: MainView.construct()).matchParent()
         }
     }
 #endif
