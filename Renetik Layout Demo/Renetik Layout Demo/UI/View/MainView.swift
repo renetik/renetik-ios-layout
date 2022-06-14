@@ -4,7 +4,7 @@ class MainView: CSView {
     override class func construct() -> Self {
         super.construct().background(.demo_panel)
     }
-    let scrollView = UIScrollView.construct()
+    let scrollView = CSScrollView.construct()
     let titleSubtitle = ImageTitleSubtitleButton.construct()
     let testSwitch = SwitchButton.construct(
         icon: .chevron_right, title: "test")
@@ -13,28 +13,28 @@ class MainView: CSView {
 
     override func onCreate() {
         super.onCreate()
-        add(view: scrollView).matchParent().add(
-            view: CSView.construct(), onCreate: { [unowned self] in
-                $0.matchParentWidth()
-                $0.add(view: titleSubtitle,
-                    onCreate: { $0.matchParentWidth() },
-                    onLayout: { $0.fromPrevious(top: 0) })
-                $0.add(view: HorizontalLineStrong.construct())
-                    .matchParentWidth().fromPrevious(top: 0)
-                $0.add(view: testSwitch,
-                    onCreate: { $0.matchParentWidth() },
-                    onLayout: { $0.fromPrevious(top: 0) })
-                $0.add(view: expandView,
-                    onCreate: { $0.matchParentWidth() },
-                    onLayout: { $0.fromPrevious(top: 15) })
-                $0.add(view: headerView,
-                    onCreate: { $0.matchParentWidth() },
-                    onLayout: { $0.fromPrevious(top: 15) })
-            }, onLayout: { [unowned self] in
-                $0.from(left: leftInset).fill(right: rightInset)
-                    .heightToFit().from(top: topInset)
-                scrollView.updateContentSize()
-            })
+        add(view: scrollView, onCreate: {
+            $0.matchParent()
+            $0.add(view: CSView.construct(), onCreate: { [unowned self] in
+                    $0.add(view: titleSubtitle,
+                        onCreate: { $0.matchParentWidth() },
+                        onLayout: { $0.fromPrevious(top: 0) })
+                    $0.add(view: HorizontalLineStrong.construct())
+                        .matchParentWidth().fromPrevious(top: 0)
+                    $0.add(view: testSwitch,
+                        onCreate: { $0.matchParentWidth() },
+                        onLayout: { $0.fromPrevious(top: 0) })
+                    $0.add(view: expandView,
+                        onCreate: { $0.matchParentWidth() },
+                        onLayout: { $0.fromPrevious(top: 15) })
+                    $0.add(view: headerView,
+                        onCreate: { $0.matchParentWidth() },
+                        onLayout: { $0.fromPrevious(top: 15) })
+                }, onLayout: { [unowned self] in
+                    $0.from(left: leftInset).fill(right: rightInset)
+                        .from(top: topInset).heightToFit()
+                })
+        }, onLayout: { $0.updateContentSize() })
     }
 }
 #if DEBUG
