@@ -1,7 +1,5 @@
 import RenetikLayout
 
-//var delegate: AppDelegate!
-
 //@main
 //class AppDelegate: CSApplicationDelegate {
 //
@@ -14,7 +12,7 @@ import RenetikLayout
 //    }
 //}
 
-@UIApplicationMain
+@main
 class ApplicationDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
