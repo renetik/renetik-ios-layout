@@ -1,4 +1,4 @@
-import RenetikFramework
+import RenetikLayout
 
 class LayoutDemoSceneDelegate: CSWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession,
