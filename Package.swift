@@ -24,7 +24,7 @@ let package = Package(
             dependencies: [
                 .product(name: "RenetikCore", package: "renetik-ios-core"),
                 .product(name: "RenetikEvent", package: "renetik-ios-event"),
-		.product(name: "RenetikUI", package: "renetik-ios-ui"),
+                .product(name: "RenetikUI", package: "renetik-ios-ui"),
             ]
         ),
     ],
