@@ -10,6 +10,8 @@ by different methods all over again,
 just get better in real programming and focus on your task, 
 not new ways of doing things that distract you from making great products.
 
+## Tested on iOS, MacOS Catalyst
+
 ## Basic idea
 Is to have functions onCreate and onLayout in parent class as well as in layout code structure so it is well structired and visualy resembles structure of actual layout. Other is to use fuctions like from(top:.. matchParentWidth(padding:..) flex(right:.. heightToFit() and others that gives you tools to create any layout you imgine easily. This all is just basic UIKit staf. 
 Then there is updateLayout(forced:Bool that do update of layout or also all parent views, its also important yo use CSSceneDelgate as it calls updateLayout for some views on orientation change what is necessary in some cases.. 
