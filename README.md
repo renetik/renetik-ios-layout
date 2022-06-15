@@ -10,8 +10,9 @@ by different methods all over again,
 just get better in real programming and focus on your task, 
 not new ways of doing things that distract you from making great products.
 
-## Example
+#Basic idea is to have function onCreate and onLayout in parent class as well as in layout code structure so it is well structired and visualy resembles structure of actual layout. Other is to use fuctions like from(top:.. matchParentWidth(padding:..) flex(right:.. heightToFit() and others that gives you tools to create any layout you imgine easily. This all is just basic UIKit staf.
 
+## Example
 <p align="left">
     <img src="https://github.com/renetik/renetik-ios-layout/blob/4ab8be927dd354bbea8dc3a6af8fc6be53c5770b/Images/Simulator2.png?raw=true" height="500">
     <img src="https://github.com/renetik/renetik-ios-layout/blob/4ab8be927dd354bbea8dc3a6af8fc6be53c5770b/Images/Simulator1.png?raw=true" width="500">
