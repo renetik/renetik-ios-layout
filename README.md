@@ -10,7 +10,8 @@ by different methods all over again,
 just get better in real programming and focus on your task, 
 not new ways of doing things that distract you from making great products.
 
-## Basic idea is to have function onCreate and onLayout in parent class as well as in layout code structure so it is well structired and visualy resembles structure of actual layout. Other is to use fuctions like from(top:.. matchParentWidth(padding:..) flex(right:.. heightToFit() and others that gives you tools to create any layout you imgine easily. This all is just basic UIKit staf.
+## Basic idea
+Is to have function onCreate and onLayout in parent class as well as in layout code structure so it is well structired and visualy resembles structure of actual layout. Other is to use fuctions like from(top:.. matchParentWidth(padding:..) flex(right:.. heightToFit() and others that gives you tools to create any layout you imgine easily. This all is just basic UIKit staf.
 
 ## Example
 <p align="left">
