@@ -1,5 +1,5 @@
 import RenetikEvent
-open class CSView: UIControl, CSEventOwnerHasDestroy {
+open class CSView: UIControl, CSEventOwner {
 
     @discardableResult
     open override class func construct() -> Self { construct(defaultSize: true) }
@@ -40,16 +40,14 @@ open class CSView: UIControl, CSEventOwnerHasDestroy {
         })
     }
 
-    public var eventDestroy = event()
     public let registrations = CSRegistrations()
 
     deinit {
         registrations.cancel()
-        eventDestroy.fire().clear()
     }
 }
 
-open class CSScrollView: UIScrollView, CSEventOwnerHasDestroy {
+open class CSScrollView: UIScrollView, CSEventOwner {
 
     @discardableResult
     open override class func construct() -> Self {
@@ -91,11 +89,9 @@ open class CSScrollView: UIScrollView, CSEventOwnerHasDestroy {
         })
     }
 
-    public var eventDestroy = event()
     public let registrations = CSRegistrations()
 
     deinit {
         registrations.cancel()
-        eventDestroy.fire().clear()
     }
 }

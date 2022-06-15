@@ -16,13 +16,13 @@ class ButtonsView: CSView {
                 $0.fromPrevious(top: 0).matchParentWidth().height(60)
                 $0.add(view: moveButton,
                     onCreate: { $0.from(left: 0).matchParentHeight() },
-                    onLayout: { $0.width($0.superview!.width / 2) })
+                    onLayout: { $0.width($0.parent.width / 2) })
                 $0.add(view: VerticalLine.constructMedium(),
                     onCreate: { $0.matchParentHeight() },
                     onLayout: { $0.fromPrevious(left: 0) })
                 $0.add(view: resizeButton,
                     onCreate: { $0.matchParentHeight() },
-                    onLayout: { $0.fromPrevious(left: 0).width($0.superview!.width / 2) })
+                    onLayout: { $0.fromPrevious(left: 0).width($0.parent.width / 2) })
             })
         add(view: HorizontalLineStrong.constructMedium())
             .fromPrevious(top: 0).matchParentWidth()
@@ -31,7 +31,7 @@ class ButtonsView: CSView {
                 $0.fromPrevious(top: 0).matchParentWidth().height(60)
                 $0.add(view: scalesButton,
                     onCreate: { $0.from(left: 0).matchParentHeight() },
-                    onLayout: { $0.width($0.superview!.width / 2) })
+                    onLayout: { $0.width($0.parent.width / 2) })
                 $0.add(view: VerticalLine.constructMedium(),
                     onCreate: { $0.matchParentHeight() },
                     onLayout: { $0.fromPrevious(left: 0) })

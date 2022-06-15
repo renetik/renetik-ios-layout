@@ -1,3 +1,4 @@
+import UIKit
 extension UIView {
 
     @discardableResult
@@ -77,4 +78,6 @@ extension UIView {
     }
 
     public func child(at condition: (UIView) -> Bool) -> UIView? { subviews.first(where: condition) }
+
+    public var parent: UIView { superview! }
 }

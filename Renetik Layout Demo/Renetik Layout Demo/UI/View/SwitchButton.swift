@@ -22,14 +22,12 @@ class SwitchButton: CSWrapper<UIView> {
         contentView.add(view: imageView.width(24))
             .from(left: 0).matchParentHeight()
 
-        contentView.add(view: titleView, onCreate: {
-            $0.fromPrevious(left: 24).matchParentHeight()
-        }, onLayout: { [unowned self] in
-                $0.fill(right: 0, from: switchView)
-            })
-        contentView.add(view: switchView, onLayout: {
-            $0.from(right: 15).centeredVertical()
-        })
+        contentView.add(view: titleView,
+            onCreate: { $0.fromPrevious(left: 24).matchParentHeight() },
+            onLayout: { [unowned self] in $0.fill(right: 0, from: switchView) })
+
+        contentView.add(view: switchView,
+            onLayout: { $0.from(right: 15).centeredVertical() })
     }
 
     override func onCreated() {

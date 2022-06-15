@@ -19,8 +19,8 @@ class HeaderSectionView: CSView {
 #if DEBUG
     import SwiftUI
     class HeaderSectionViewPreview: PreviewProvider, CSPreviewProvider {
-        class func preview(in window: UIView) {
-            window.add(view: HeaderSectionView.construct())
+        class func preview(in view: UIView) {
+            view.add(view: HeaderSectionView.construct())
                 .matchParentWidth().heightToFit()
         }
     }
