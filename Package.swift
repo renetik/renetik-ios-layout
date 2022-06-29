@@ -1,4 +1,4 @@
-// swift-tools-version: 5.6
+// swift-tools-version: 5.5
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -14,9 +14,9 @@ let package = Package(
             targets: ["RenetikLayout"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/renetik/renetik-ios-core", exact: "0.9.3" ),
-        .package(url: "https://github.com/renetik/renetik-ios-event", exact: "0.9.3" ),
-        .package(url: "https://github.com/renetik/renetik-ios-ui", exact: "0.9.3" ),
+        .package(url: "https://github.com/renetik/renetik-ios-core", branch: "master"),
+        .package(url: "https://github.com/renetik/renetik-ios-event", branch: "master"),
+        .package(url: "https://github.com/renetik/renetik-ios-ui", branch: "master"),
     ],
     targets: [
         .target(
