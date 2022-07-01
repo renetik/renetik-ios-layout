@@ -1,11 +1,13 @@
 [![Xcode - Build Analyze](https://github.com/renetik/renetik-ios-layout/actions/workflows/build_analyze.yml/badge.svg)
 ](https://github.com/renetik/renetik-ios-layout/actions/workflows/build_analyze.yml)
+
 # Renetik iOS - Layout
 #### [https://github.com/renetik/renetik-ios-layout](https://github.com/renetik/renetik-ios-layout/)
 #### [Documentation](https://renetik.github.io/renetik-ios-layout/)
+
 Framework to enjoy, improve and speed up your application development while writing readable code.
 Used as library in many projects and improving it while developing new projects.
-I am open for [Hire](https://renetik.github.io) or investment in my mobile app music production & perfromance project Renetik Instruments www.renetik.com.
+I am open to [Hire](https://renetik.github.io) or investment in my mobile app music production & perfromance project Renetik Instruments www.renetik.com.
 
 ## About
 Write complex reliable layouts easy, 
